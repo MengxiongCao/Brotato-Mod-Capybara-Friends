@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://items/global/effect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "hide_potato_and_legs"
+text_key = "[EMPTY]"
+value = 1
+custom_key = "capybara_hide_potato"
+storage_method = 1
+effect_sign = 2
+custom_args = [  ]

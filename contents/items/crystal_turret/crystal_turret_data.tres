@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://items/global/item_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/crystal_turret_effect_0.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/cp_crystal_tower.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_charge_turret/charge_turret_effect.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "item_cp_crystal_turret_0"
+unlocked_by_default = true
+can_be_looted = false
+icon = ExtResource( 3 )
+name = "ITEM_CP_CRYSTAL_TURRET"
+tier = 0
+value = 80
+effects = [ ExtResource( 2 ), ExtResource( 5 ) ]
+tracking_text = "DAMAGE_DEALT"
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = 1
+item_appearances = [  ]
+tags = [ "structure", "stat_capybara_crystal" ]

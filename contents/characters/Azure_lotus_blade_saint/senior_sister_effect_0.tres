@@ -1,0 +1,49 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/ExtraBossWhenUpgrade.gd" type="Script" id=1]
+[ext_resource path="res://items/global/custom_arg.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+arg_index = 0
+arg_sign = 5
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+arg_index = 1
+arg_sign = 1
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+arg_index = 2
+arg_sign = 5
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+arg_index = 3
+arg_sign = 5
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[resource]
+script = ExtResource( 1 )
+key = "weapon_slot"
+text_key = "EFFECT_EXTRA_BOSS_WHEN_UPGRADE"
+value = 10
+custom_key = "extra_boss_when_upgrade"
+storage_method = 1
+effect_sign = 0
+custom_args = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+value2 = 3
+max_num = 36
+stat_gain = 1

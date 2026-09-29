@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/crystal_turret/upgrade_crystal_turret_data.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/crystal_pet/upgrade_crystal_pet_data.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/upgrades_for_crystal.gd" type="Script" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/crystal_character/upgrade_crystal_character_data.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/crystal_alloy/upgrade_crystal_alloy_data.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 3 )
+upgrades_for_crystal = [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ) ]

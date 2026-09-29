@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraGainItemWhenReviveEffect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "stat_luck"
+text_key = "EFFECT_GAIN_ITEM_WHEN_REVIVE"
+value = 1
+custom_key = "capybara_gain_item_when_revive"
+storage_method = 1
+effect_sign = 0
+custom_args = [  ]
+item_name = "res://mods-unpacked/Dbear-Capybara/contents/items/holy_sword_of_judge_ment/holy_sword_of_judgement_data.tres"

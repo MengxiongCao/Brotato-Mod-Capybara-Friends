@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://particles/sprites/particle_31.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/darkfish_projectile/darkfish_projectile.gd" type="Script" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/darkfish_projectile/cp_darkfish_projectile.png" type="Texture" id=4]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0.381818 ), 0.0, 0.0, 0, 0, Vector2( 0.474684, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.636364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 1, 1, 1, 1, 0.415527, 0.415527, 0.415527, 1 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.144928, 0.384, 0.514493, 0.681159, 0.847826, 0.942029 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.317809, 0, 0.496094, 1, 0.762927, 0.556183, 0.878906, 1, 0.641018, 0.25177, 0.859375, 1, 0.874115, 0.707031, 1, 1, 0.310441, 0.0692139, 0.492188, 1, 0.977112, 0.946733, 1, 1 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 182.016
+
+[node name="DarkFishProjectile" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 0, 0 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 4 )
+
+[node name="Hitbox" parent="." index="1"]
+position = Vector2( 0, 1 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 0, -1 )
+
+[node name="FoxFireLight" type="CPUParticles2D" parent="." index="3"]
+material = SubResource( 1 )
+position = Vector2( -1, 2 )
+amount = 3
+texture = ExtResource( 2 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+angle = 720.0
+angle_random = 1.0
+scale_amount = 2.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 2 )
+color = Color( 0.176471, 0.176471, 0.176471, 1 )
+color_ramp = SubResource( 3 )
+color_initial_ramp = SubResource( 4 )
+
+[node name="TargetTriggerHitbox" parent="." index="4" instance=ExtResource( 5 )]
+unique_name_in_owner = true
+position = Vector2( -24, 4 )
+collision_layer = 8
+deals_damage = false
+
+[node name="Collision" parent="TargetTriggerHitbox" index="0"]
+position = Vector2( 25, 0 )
+shape = SubResource( 5 )
+
+[editable path="Hitbox"]
+[editable path="TargetTriggerHitbox"]

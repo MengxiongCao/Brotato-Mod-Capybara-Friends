@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://items/global/effect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "capybara_crystal_turret_energy"
+text_key = "effect_capybara_crystal_turret_energy"
+value = 100
+custom_key = "capybara_add_item"
+storage_method = 0
+effect_sign = 3
+custom_args = [  ]

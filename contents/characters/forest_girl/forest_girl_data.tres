@@ -1,0 +1,40 @@
+[gd_resource type="Resource" load_steps=14 format=2]
+
+[ext_resource path="res://items/characters/character_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/cp_forest_girl.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_appearance.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_2.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_0.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_1.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_3.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/capybara_no_item_appearance_effect.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_1a.tres" type="Resource" id=9]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_4.tres" type="Resource" id=10]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_5.tres" type="Resource" id=11]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_6.tres" type="Resource" id=12]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/forest_girl/forest_girl_effect_1b.tres" type="Resource" id=13]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "character_cp_forest_girl"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 2 )
+name = "CHARACTER_CP_FOREST_GIRL"
+tier = 0
+value = 1
+effects = [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 11 ) ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = -1
+item_appearances = [ ExtResource( 3 ) ]
+tags = [  ]
+wanted_tags = [ "stat_elemental_damage", "pet" ]
+banned_item_groups = [ "engineering" ]
+banned_items = [ "item_wandering_turret" ]
+banned_upgrades = [ "upgrade_engineering", "upgrade_attack_speed" ]
+starting_weapons = [  ]
+starting_items = [  ]

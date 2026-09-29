@@ -1,0 +1,51 @@
+[gd_resource type="Resource" load_steps=25 format=2]
+
+[ext_resource path="res://items/characters/character_data.gd" type="Script" id=1]
+[ext_resource path="res://weapons/melee/sharp_tooth/1/sharp_tooth_data.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_eyes.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_hair.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_nose.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_character.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_mouth.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_clothes.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/cp_uncle_zhang_icon.png" type="Texture" id=9]
+[ext_resource path="res://dlcs/dlc_1/weapons/ranged/flute/1/flute_data.tres" type="Resource" id=10]
+[ext_resource path="res://weapons/melee/ghost_axe/1/ghost_axe_data.tres" type="Resource" id=11]
+[ext_resource path="res://dlcs/dlc_1/weapons/melee/lute/1/lute_data.tres" type="Resource" id=12]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/harp/1/harp_1_data.tres" type="Resource" id=13]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_0.tres" type="Resource" id=14]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_3.tres" type="Resource" id=15]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_2.tres" type="Resource" id=16]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_1.tres" type="Resource" id=17]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_5.tres" type="Resource" id=18]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/blood_sword/1/blood_sword_1_data.tres" type="Resource" id=19]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/sakura_blade/1/sakura_blade_data.tres" type="Resource" id=20]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_0a.tres" type="Resource" id=21]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_6.tres" type="Resource" id=22]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_7.tres" type="Resource" id=23]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/uncle_zhang/uncle_zhang_effect_8.tres" type="Resource" id=24]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "character_cp_uncle_zhang"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 9 )
+name = "CHARACTER_CP_UNCLE_ZHANG"
+tier = 0
+value = 1
+effects = [ ExtResource( 17 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 6 ) ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = -1
+item_appearances = [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ) ]
+tags = [  ]
+wanted_tags = [ "stat_luck" ]
+banned_item_groups = [  ]
+banned_items = [  ]
+banned_upgrades = [  ]
+starting_weapons = [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 2 ), ExtResource( 19 ), ExtResource( 20 ) ]
+starting_items = [  ]

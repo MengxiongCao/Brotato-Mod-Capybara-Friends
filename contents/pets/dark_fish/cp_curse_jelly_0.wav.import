@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cp_curse_jelly_0.wav-b612a520b905f8007c704750039ae8bc.sample"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/pets/dark_fish/cp_curse_jelly_0.wav"
+dest_files=[ "res://.import/cp_curse_jelly_0.wav-b612a520b905f8007c704750039ae8bc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

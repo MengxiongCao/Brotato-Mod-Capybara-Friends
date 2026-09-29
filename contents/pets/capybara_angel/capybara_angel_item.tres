@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://items/all/bot_o_mine/bot_o_mine.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/capybara_angel/capybara_angel_stats.tres" type="Resource" id=2]
+[ext_resource path="res://entities/units/pet/ItemPet.gd" type="Script" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/capybara_angel/cp_capybara_angel_icon.png" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/capybara_angel/cp_capybara_angel_scene.png" type="Texture" id=5]
+
+[resource]
+script = ExtResource( 3 )
+my_id = "capybara_angel"
+unlocked_by_default = false
+can_be_looted = true
+icon = ExtResource( 4 )
+name = "CAPYBARA_ANGEL_NAME"
+tier = 0
+value = 1
+effects = [  ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+stats = ExtResource( 2 )
+behaviour_description = "CAPYBARA_ANGEL_BEHAVIOUR_DESCRIPTION"
+show_hp = false
+show_dammage = false
+show_speed = true
+show_knoback_resistance = false
+show_material_dropped = false
+screen_example = ExtResource( 5 )
+item_drop = ExtResource( 1 )

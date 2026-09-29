@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_light_saber_attack_1.mp3-c75da97953be552906d7d7832f93c152.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/weapons/light_saber_flame/cp_light_saber_attack_1.mp3"
+dest_files=[ "res://.import/cp_light_saber_attack_1.mp3-c75da97953be552906d7d7832f93c152.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

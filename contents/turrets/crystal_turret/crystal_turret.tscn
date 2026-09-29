@@ -1,0 +1,77 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/crystal_turret.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/cp_crystal_tower.png" type="Texture" id=2]
+[ext_resource path="res://entities/structures/structure.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/structures/turret/turret_shoot_animation.tres" type="Animation" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/cp_crystal_tower_2.png" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/cp_crystal_tower_3.png" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/cp_crystal_tower_1.png" type="Texture" id=7]
+[ext_resource path="res://particles/curse/curse_enemy_particles.tscn" type="PackedScene" id=8]
+[ext_resource path="res://resources/shaders/weapon_outline_shadermat.tres" type="Material" id=9]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/ui_crystal_turret_progress_bar.tscn" type="PackedScene" id=10]
+
+[sub_resource type="Animation" id=3]
+resource_name = "shoot_wt"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "shoot"
+} ]
+}
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 50.3241
+
+[node name="CrystalTurret" instance=ExtResource( 3 )]
+position = Vector2( 0, 20 )
+collision_mask = 2048
+script = ExtResource( 1 )
+outline_material = ExtResource( 9 )
+curse_particles = ExtResource( 8 )
+crystal_icons = [ ExtResource( 2 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ) ]
+crystal_data_names = [ "item_cp_crystal_turret_0", "item_cp_crystal_turret_1", "item_cp_crystal_turret_2", "item_cp_crystal_turret_3" ]
+
+[node name="Sprite" parent="Animation" index="0"]
+texture = ExtResource( 2 )
+
+[node name="Muzzle" parent="Animation" index="1"]
+position = Vector2( 0, -48.3057 )
+
+[node name="Collision" parent="." index="1"]
+position = Vector2( 0, -17 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+anims/shoot = ExtResource( 4 )
+anims/shoot_wt = SubResource( 3 )
+
+[node name="Range" type="Area2D" parent="." index="3"]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range" index="0"]
+position = Vector2( 0, -57 )
+rotation = 1.5708
+scale = Vector2( 5, 5 )
+shape = SubResource( 1 )
+
+[node name="UICrystalTurretProgressBar" parent="." index="4" instance=ExtResource( 10 )]
+margin_left = -48.0
+margin_top = -118.0
+margin_right = 272.0
+margin_bottom = -70.0
+rect_scale = Vector2( 0.3, 0.3 )
+capybara_max_energy = 300.0
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="body_entered" from="Range" to="." method="_on_Range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_Range_body_exited"]

@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://entities/units/pet/ItemPet.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/dark_fish/cp_dark_fish_icon.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/dark_fish/dark_fish_stats.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/dark_fish/dark_fish_data.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/dark_fish/cp_darkfish_scene.png" type="Texture" id=5]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "dark_fish"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 2 )
+name = "DARK_FISH_NAME"
+tier = 0
+value = 1
+effects = [  ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+stats = ExtResource( 3 )
+behaviour_description = "DARK_FISH_BEHAVIOUR_DESCRIPTION"
+show_hp = false
+show_dammage = false
+show_speed = true
+show_knoback_resistance = false
+show_material_dropped = false
+screen_example = ExtResource( 5 )
+item_drop = ExtResource( 4 )

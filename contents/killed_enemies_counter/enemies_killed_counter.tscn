@@ -1,0 +1,318 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://entities/entity.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/killed_enemies_counter/cp_enemies_counter_icon.png" type="Texture" id=2]
+[ext_resource path="res://resources/fonts/raw/Anybody-Medium.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/killed_enemies_counter/cp_heart_rate_icon.png" type="Texture" id=4]
+[ext_resource path="res://resources/themes/base_theme.tres" type="Theme" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/killed_enemies_counter/enemies_killed_counter.gd" type="Script" id=7]
+
+[sub_resource type="Animation" id=4]
+resource_name = "count_changed"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.564706, 0.270588, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.827451, 0.596078, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Label:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.001, 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, -35 ), Vector2( 23, -37 ), Vector2( -20, 0 ), Vector2( 23, -60 ), Vector2( 3, -35 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.55, 0.55 ), Vector2( 0.75, 0.75 ), Vector2( 0.55, 0.55 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "hit_1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -27 ), Vector2( 0, -27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 1.5 ), Vector2( 1.5, 0.5 ), Vector2( 0.75, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.760784, 0.513726, 0.890196, 1 ), Color( 0.580392, 0.258824, 0.670588, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "hit_2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -27 ), Vector2( 0, -27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 1.5 ), Vector2( 1.5, 0.5 ), Vector2( 0.75, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.580392, 0.258824, 0.670588, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 10
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "heart_rate_changed"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/heart_rate_label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.482353, 0.482353, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/heart_rate_label:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "heart_rate_idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("heart_rate:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 0.4 ), Vector2( 0.6, 0.6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("heart_rate:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.219608, 0.219608, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "capybara_update_heart_rate_m"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/heart_rate_label:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
+}
+
+[node name="EnemiesKilledCounter" instance=ExtResource( 1 )]
+z_index = 1
+script = ExtResource( 7 )
+outline_material = null
+
+[node name="Animation" parent="." index="0"]
+position = Vector2( 0, -22.9208 )
+scale = Vector2( 0.55, 0.55 )
+
+[node name="Sprite" parent="Animation" index="0"]
+position = Vector2( -40, 34.868 )
+texture = ExtResource( 2 )
+
+[node name="Collision" parent="." index="1"]
+visible = false
+disabled = true
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "RESET"
+anims/count_changed = SubResource( 4 )
+anims/hit_1 = SubResource( 12 )
+anims/hit_2 = SubResource( 13 )
+
+[node name="Control" type="Control" parent="." index="3"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" index="0"]
+margin_left = 3.0
+margin_top = -35.0
+margin_right = 212.0
+margin_bottom = 27.0
+theme = ExtResource( 6 )
+custom_fonts/font = SubResource( 2 )
+text = "x0"
+max_lines_visible = 1
+
+[node name="heart_rate_label" type="Label" parent="Control" index="1"]
+unique_name_in_owner = true
+margin_left = -103.0
+margin_top = -35.0
+margin_right = 106.0
+margin_bottom = 27.0
+rect_pivot_offset = Vector2( 0, 31 )
+theme = ExtResource( 6 )
+custom_fonts/font = SubResource( 2 )
+text = "x0"
+valign = 1
+max_lines_visible = 1
+
+[node name="Timer" type="Timer" parent="." index="4"]
+
+[node name="heart_rate" type="Sprite" parent="." index="5"]
+unique_name_in_owner = true
+modulate = Color( 1, 0.590272, 0.590272, 1 )
+position = Vector2( -127, 0 )
+scale = Vector2( 0.505006, 0.505006 )
+texture = ExtResource( 4 )
+
+[node name="HeartRateAnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+autoplay = "heart_rate_idle"
+anims/heart_rate_changed = SubResource( 14 )
+anims/heart_rate_idle = SubResource( 15 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

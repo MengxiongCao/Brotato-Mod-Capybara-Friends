@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_saint_sword_1.mp3-60b7dfd9b3efc2be57cbcb5898cfd7a3.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/weapons/lotus_sword/cp_saint_sword_1.mp3"
+dest_files=[ "res://.import/cp_saint_sword_1.mp3-60b7dfd9b3efc2be57cbcb5898cfd7a3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_harp_shooting.wav-c32352a3d58a860429d88692cff7b573.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/weapons/harp/cp_harp_shooting.wav"
+dest_files=[ "res://.import/cp_harp_shooting.wav-c32352a3d58a860429d88692cff7b573.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=10 format=2]
+
+[ext_resource path="res://items/characters/character_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/lotus_sword/4/lotus_sword_4_data.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/weapon_creator/weapon_creator_eyes_frame.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/weapon_creator/weapon_creator_eyes.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/weapon_creator/weapon_creator_effect_1.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/weapon_creator/weapon_creator_effect_0.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/weapon_creator/cp_weapon_creator_icon.png" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/weapon_creator/weapon_creator_effect_0a.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/weapon_creator/weapon_creator_effect_3.tres" type="Resource" id=9]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "character_cp_weapon_creator"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 7 )
+name = "CHARACTER_CP_WEAPON_CREATOR"
+tier = 0
+value = 1
+effects = [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 9 ) ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = -1
+item_appearances = [ ExtResource( 4 ), ExtResource( 3 ) ]
+tags = [ "stat_capybara_crystal" ]
+wanted_tags = [ "stat_capybara_crystal", "stat_elemental_damage", "stat_engineering", "stat_melee_damage", "stat_ranged_damage" ]
+banned_item_groups = [  ]
+banned_items = [  ]
+banned_upgrades = [  ]
+starting_weapons = [ ExtResource( 2 ) ]
+starting_items = [  ]

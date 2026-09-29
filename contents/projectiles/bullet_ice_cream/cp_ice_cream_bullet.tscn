@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/auto_target_projectile.gd" type="Script" id=2]
+[ext_resource path="res://particles/running_smoke.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/unicorn_rainbow.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_ice_cream/cp_ice_cream_bullet.png" type="Texture" id=5]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Gradient" id=1]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.146667, 0.28, 0.433333, 0.593333, 0.72, 0.826667, 0.92, 1 )
+colors = PoolColorArray( 1, 0.421875, 0.421875, 1, 1, 0.761042, 0.506667, 1, 0.772363, 1, 0.58375, 1, 0.672396, 1, 0.923218, 1, 0.764896, 0.895305, 1, 1, 0.824985, 0.675659, 0.960938, 1, 0.945465, 0.799218, 0.975818, 1, 0.976562, 0.701904, 0.914335, 1, 1, 1, 1, 1 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 685.026
+
+[node name="BulletIceCream" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 1, 0 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 5 )
+
+[node name="Hitbox" parent="." index="1"]
+position = Vector2( -18, 1 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 19, -2 )
+
+[node name="RunningSmoke" parent="." index="3" instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
+amount = 3
+emission_shape = 1
+emission_sphere_radius = 50.0
+angle_random = 0.0
+scale_amount = 0.9
+color = Color( 1, 1, 1, 1 )
+color_initial_ramp = SubResource( 1 )
+script = ExtResource( 4 )
+take_background_color = false
+
+[node name="TargetTriggerHitbox" parent="." index="4" instance=ExtResource( 6 )]
+unique_name_in_owner = true
+visible = false
+position = Vector2( -24, 4 )
+collision_layer = 8
+deals_damage = false
+
+[node name="Collision" parent="TargetTriggerHitbox" index="0"]
+position = Vector2( 25, 0 )
+shape = SubResource( 2 )
+
+[connection signal="killed_something" from="Hitbox" to="." method="_on_Hitbox_killed_something"]
+[connection signal="hit_something" from="TargetTriggerHitbox" to="." method="_on_TargetTriggerHitbox_hit_something"]
+
+[editable path="Hitbox"]
+[editable path="TargetTriggerHitbox"]

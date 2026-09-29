@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cp_laughing_2.wav-a4ab67a8b2be373710e80d59550d66c3.sample"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/pets/blood_aura/cp_laughing_2.wav"
+dest_files=[ "res://.import/cp_laughing_2.wav-a4ab67a8b2be373710e80d59550d66c3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

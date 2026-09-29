@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/ModEffect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "enemy_health"
+text_key = "EFFECT_CAPYBARA_ALL_SCALING"
+value = 1
+custom_key = "capybara_all_scaling"
+storage_method = 1
+effect_sign = 3
+custom_args = [  ]

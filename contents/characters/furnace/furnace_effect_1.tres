@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraSpawnSomethingWhenTreeDieEffect.gd" type="Script" id=1]
+[ext_resource path="res://items/all/turret/turret_effect_1.tres" type="Resource" id=2]
+[ext_resource path="res://items/global/custom_arg.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+arg_index = 7
+arg_sign = 4
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[resource]
+script = ExtResource( 1 )
+key = "capybara_spawn_turret_for_per_stat"
+text_key = "effect_capybara_spawn_turret_for_per_stat"
+value = 5
+custom_key = "stat_elemental_damage"
+storage_method = 0
+effect_sign = 3
+custom_args = [ SubResource( 1 ) ]
+effect = ExtResource( 2 )
+stat_scaled = 1

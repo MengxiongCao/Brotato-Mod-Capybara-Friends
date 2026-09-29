@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/cp_unicorn_close_eyes.png-4a7efe8c04964f7e92adc101e51aadca.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/cp_unicorn_close_eyes.png"
+dest_files=[ "res://.import/cp_unicorn_close_eyes.png-4a7efe8c04964f7e92adc101e51aadca.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

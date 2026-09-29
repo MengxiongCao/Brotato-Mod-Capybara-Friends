@@ -1,0 +1,27 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraTurretEffect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_charge_turret/charge_turret_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_charge_turret/charge_turret.tscn" type="PackedScene" id=3]
+
+[resource]
+script = ExtResource( 1 )
+key = ""
+text_key = "EFFECT_CAPYBARA_CHARGE_TURRET"
+value = 1
+custom_key = "capybara_add_item"
+storage_method = 0
+effect_sign = 3
+custom_args = [  ]
+spawn_cooldown = -1
+scene = ExtResource( 3 )
+stats = ExtResource( 2 )
+effects = [  ]
+spawn_in_center = -1
+spawn_around_player = 300
+can_be_grouped = false
+is_pet = false
+shooting_animation_speed = 1.0
+is_burning = false
+is_spawning = true
+tracking_key = ""

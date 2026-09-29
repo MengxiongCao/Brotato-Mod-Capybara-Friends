@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://effects/weapons/gain_stat_every_killed_enemies_effect.gd" type="Script" id=1]
+[ext_resource path="res://items/global/custom_arg.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+arg_index = 0
+arg_sign = 4
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+arg_index = 1
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[resource]
+script = ExtResource( 1 )
+key = "effect_gain_stat_every_killed_enemies"
+text_key = ""
+value = 40
+custom_key = ""
+storage_method = 0
+effect_sign = 3
+custom_args = [ SubResource( 1 ), SubResource( 2 ) ]
+stat = "stat_capybara_wave_time"
+stat_nb = 1

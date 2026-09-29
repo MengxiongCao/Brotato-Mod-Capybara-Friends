@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/blade_of_death/1/blade_of_death_sword_wave_effect_projectile.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraNohitEffect.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+key = ""
+text_key = "EFFECT_CAPYBARA_PLAYER_NO_HIT"
+value = 4
+custom_key = "capybara_player_no_hit"
+storage_method = 1
+effect_sign = 3
+custom_args = [  ]
+interval = 5
+time_to_shoot_sword_wave = 15
+weapon_stats = ExtResource( 1 )

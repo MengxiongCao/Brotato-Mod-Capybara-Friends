@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cp_fairy_attack_1.wav-b43a05b5814bb9bd20f8d695eedb2263.sample"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/turrets/fairy/cp_fairy_attack_1.wav"
+dest_files=[ "res://.import/cp_fairy_attack_1.wav-b43a05b5814bb9bd20f8d695eedb2263.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

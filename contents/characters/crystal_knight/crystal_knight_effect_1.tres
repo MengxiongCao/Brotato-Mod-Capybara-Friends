@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraProjectileOnHitEffect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/crystal_knight/crystal_knight_stats.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+key = "capybara_ranged_melee_attack"
+text_key = "EFFECT_CAPYBARA_RANGED_MELEE_ATTACK"
+value = 1
+custom_key = ""
+storage_method = 1
+effect_sign = 0
+custom_args = [  ]
+weapon_stats = ExtResource( 2 )
+auto_target_enemy = false

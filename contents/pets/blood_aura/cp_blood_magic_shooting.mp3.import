@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_blood_magic_shooting.mp3-39ec72066dadc3a3881c40126c7bab1b.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/pets/blood_aura/cp_blood_magic_shooting.mp3"
+dest_files=[ "res://.import/cp_blood_magic_shooting.mp3-39ec72066dadc3a3881c40126c7bab1b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

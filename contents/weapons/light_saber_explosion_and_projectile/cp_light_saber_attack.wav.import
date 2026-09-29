@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cp_light_saber_attack.wav-3df614d2786b3526865d23a2932269d0.sample"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/weapons/light_saber_explosion_and_projectile/cp_light_saber_attack.wav"
+dest_files=[ "res://.import/cp_light_saber_attack.wav-3df614d2786b3526865d23a2932269d0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

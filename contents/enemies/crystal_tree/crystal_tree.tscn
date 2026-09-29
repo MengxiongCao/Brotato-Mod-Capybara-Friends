@@ -1,0 +1,109 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/enemies/crystal_tree/crystal_tree.gd" type="Script" id=1]
+[ext_resource path="res://entities/units/enemies/enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/enemies/crystal_tree/crystal_tree_stats.tres" type="Resource" id=3]
+[ext_resource path="res://entities/units/movement_behaviors/patrol_edges_of_map_movement_behavior.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/particle_accelerator_projectile.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/enemies/crystal_tree/cp_crystal_tree.png" type="Texture" id=6]
+[ext_resource path="res://entities/units/enemies/attack_behaviors/shooting_attack_behavior.gd" type="Script" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/dark_fish/cp_shadow.png" type="Texture" id=9]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 42.2966
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 76.531
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 38.0526
+
+[node name="Enemy" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+can_be_boosted = false
+stats = ExtResource( 3 )
+enemy_id = "capybara_crystal_tree"
+can_be_charmed = false
+
+[node name="Animation" parent="." index="0"]
+position = Vector2( 0, -4 )
+
+[node name="Sprite" parent="Animation" index="0"]
+position = Vector2( -1, 10.6366 )
+texture = ExtResource( 6 )
+
+[node name="sp_shadow" type="Sprite" parent="Animation" index="1"]
+show_behind_parent = true
+position = Vector2( -1.0001, 0.999898 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 9 )
+
+[node name="Collision" parent="." index="1"]
+position = Vector2( -1, 7 )
+shape = SubResource( 2 )
+
+[node name="Hurtbox" parent="." index="2"]
+visible = false
+
+[node name="Collision" parent="Hurtbox" index="0"]
+position = Vector2( -2, -24 )
+shape = SubResource( 3 )
+
+[node name="Hitbox" parent="." index="3"]
+visible = false
+
+[node name="Collision" parent="Hitbox" index="0"]
+visible = false
+position = Vector2( -1, -30 )
+shape = SubResource( 4 )
+
+[node name="MovementBehavior" parent="." index="6"]
+position = Vector2( 0, -9 )
+script = ExtResource( 4 )
+edge_distance = 50
+edge_randomization = 0
+max_target_distance = 100
+
+[node name="AttackBehavior" parent="." index="7"]
+position = Vector2( 1, 0 )
+script = ExtResource( 7 )
+projectile_scene = ExtResource( 5 )
+projectile_speed = 1
+projectile_speed_randomization = 0
+speed_change_after_each_projectile = 0
+cooldown = 180.0
+initial_cooldown = 0
+max_cd_randomization = 10
+long_cooldown_every_x_shoots = 0
+long_cooldown = 0
+damage = 1
+damage_increase_each_wave = 0.5
+min_range = 0
+max_range = 10000
+attack_anim_speed = 1.0
+base_direction_randomization = 0.0
+base_direction_constant_spread = false
+alternate_between_base_direction_spread = false
+random_direction = false
+number_projectiles = 1
+projectile_spread = 0.0
+spawn_projectiles_on_target = false
+projectile_spawn_spread = 0
+projectile_spawn_only_on_borders = false
+specific_degrees_spawns = [  ]
+constant_spread = false
+constant_spread_rand_base_pos = 0.0
+atleast_one_projectile_on_target = false
+shoot_towards_unit = false
+shoot_in_unit_direction = false
+shoot_away_from_unit = false
+shoot_from_proj_pos_towards_player = false
+random_rotation = 0.0
+rotate_projectile = true
+delete_projectile_on_death = true
+
+[node name="EffectBehaviors" parent="." index="10"]
+position = Vector2( -1, 0 )
+
+[editable path="Hurtbox"]
+[editable path="Hitbox"]

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://items/sets/support/support_set_data.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/rg_knife/4/rg_knife_4_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/rg_knife/4/rg_knife_4_effect_0.tres" type="Resource" id=3]
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/rg_knife/rg_knife.tscn" type="PackedScene" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/rg_knife/forest_set_data.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/rg_knife/cp_rg_knife_icon.png" type="Texture" id=7]
+
+[resource]
+script = ExtResource( 4 )
+my_id = "weapon_rg_knife_4"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 7 )
+name = "WEAPON_RG_KNIFE"
+tier = 3
+value = 85
+effects = [ ExtResource( 3 ) ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+weapon_id = "weapon_rg_knife"
+type = 0
+sets = [ ExtResource( 1 ), ExtResource( 6 ) ]
+scene = ExtResource( 5 )
+stats = ExtResource( 2 )
+add_to_chars_as_starting = [  ]

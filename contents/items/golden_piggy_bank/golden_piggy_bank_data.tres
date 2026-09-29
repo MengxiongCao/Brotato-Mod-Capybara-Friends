@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/golden_piggy_bank/golden_piggy_bank_effect_1.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/golden_piggy_bank/golden_piggy_bank_effect_1a.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/golden_piggy_bank/cp_golden_piggy_bank.png" type="Texture" id=3]
+[ext_resource path="res://items/global/item_data.gd" type="Script" id=4]
+
+[resource]
+script = ExtResource( 4 )
+my_id = "item_golden_piggy_bank"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 3 )
+name = "ITEM_GOLDEN_PIGGY_BANK"
+tier = 2
+value = 80
+effects = [ ExtResource( 1 ), ExtResource( 2 ) ]
+tracking_text = "MATERIALS_GAINED"
+is_lockable = false
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = 1
+item_appearances = [  ]
+tags = [ "stat_harvesting" ]

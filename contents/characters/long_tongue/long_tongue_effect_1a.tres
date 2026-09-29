@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/long_tongue/long_tongue_effect_projectile.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraProjectileOnHitEffect.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+key = "capybara_projectile_when_consumable"
+text_key = "effect_capybara_projectile_when_consumable"
+value = 1
+custom_key = ""
+storage_method = 1
+effect_sign = 3
+custom_args = [  ]
+weapon_stats = ExtResource( 1 )
+auto_target_enemy = true

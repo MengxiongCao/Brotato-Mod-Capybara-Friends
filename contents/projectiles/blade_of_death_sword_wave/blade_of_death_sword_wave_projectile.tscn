@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/blade_of_death_sword_wave/cp_blade_of_death_sword_wave.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/blade_of_death_sword_wave/capybara_blade_of_death_burning_particles.tscn" type="PackedScene" id=3]
+[ext_resource path="res://projectiles/bullet_lightning/sprites/bullet_lightning_0000.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 4 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "fire"
+length = 0.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 0.431373, 0.0117647, 0.0117647, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.46 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.9, 0.9 ), Vector2( 0.7, 0.7 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.46 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 2 ) ]
+}
+
+[node name="BladeOfDeathSwordWave" instance=ExtResource( 1 )]
+position = Vector2( -1, 0 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 4, -1 )
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
+
+[node name="Hitbox" parent="." index="1"]
+position = Vector2( -20, -1 )
+
+[node name="BurningParticles" parent="Hitbox" index="1" instance=ExtResource( 3 )]
+unique_name_in_owner = true
+position = Vector2( 65.8333, 0 )
+amount = 3
+local_coords = false
+emission_sphere_radius = 70.0
+scale_amount = 1.5
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "fire"
+anims/RESET = SubResource( 2 )
+anims/fire = SubResource( 1 )
+
+[editable path="Hitbox"]

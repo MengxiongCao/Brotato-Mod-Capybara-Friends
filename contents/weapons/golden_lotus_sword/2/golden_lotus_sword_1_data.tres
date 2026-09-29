@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=10 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/golden_lotus_sword/2/golden_lotus_sword_1_effect_0.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/golden_lotus_sword/2/golden_lotus_sword_1_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/saint_sword/saint_set_data_new.tres" type="Resource" id=3]
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/golden_lotus_sword/cp_golden_lotus_sword.png" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/golden_lotus_sword/golden_lotus_sword.tscn" type="PackedScene" id=6]
+[ext_resource path="res://items/sets/fire/fire_set_data.tres" type="Resource" id=7]
+[ext_resource path="res://items/sets/precise/precise_set_data.tres" type="Resource" id=8]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/golden_lotus_sword/3/golden_lotus_sword_1_data.tres" type="Resource" id=9]
+
+[resource]
+script = ExtResource( 4 )
+my_id = "weapon_cp_golden_lotus_sword_2"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 5 )
+name = "WEAPON_CP_GOLDEN_LOTUS_SWORD"
+tier = 1
+value = 45
+effects = [ ExtResource( 1 ) ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+weapon_id = "weapon_cp_golden_lotus_sword"
+type = 0
+sets = [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ]
+scene = ExtResource( 6 )
+stats = ExtResource( 2 )
+upgrades_into = ExtResource( 9 )
+add_to_chars_as_starting = [  ]

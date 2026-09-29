@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://weapons/weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/god_of_death/pet_weapon/pet_melee_weapon.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/god_of_death/pet_weapon/cp_god_of_death_weapon.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/god_of_death/pet_weapon/pet_melee_weapon_shooting_behavior.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/capybara_weapon_outline_shadermat.tres" type="Material" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/capybara_blade_line_effect.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 207.768, 61.7502 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0.0314465, 0.226415, 1 )
+colors = PoolColorArray( 0.677237, 0.156863, 1, 0.94902, 0.65098, 0.52549, 1, 0.776471, 1, 1, 1, 0 )
+
+[sub_resource type="CircleShape2D" id=2]
+resource_local_to_scene = true
+radius = 72.4431
+
+[node name="pet_melee_weapon" instance=ExtResource( 1 )]
+position = Vector2( -40, 0 )
+script = ExtResource( 2 )
+outline_shader_mat = ExtResource( 5 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 64.154, 0 )
+scale = Vector2( 1.07692, 1.07692 )
+texture = ExtResource( 3 )
+
+[node name="Hitbox" parent="Sprite" index="0"]
+position = Vector2( 15, 0 )
+
+[node name="Collision" parent="Sprite/Hitbox" index="0"]
+position = Vector2( -119.375, 3.8147e-06 )
+shape = SubResource( 1 )
+
+[node name="Muzzle" parent="Sprite" index="1"]
+position = Vector2( 61.1429, -2.78572 )
+
+[node name="Attach" parent="Sprite" index="2"]
+position = Vector2( 40, 0 )
+
+[node name="capybara_line_effect" type="Line2D" parent="Sprite" index="3"]
+show_behind_parent = true
+position = Vector2( 60.3573, -34.0001 )
+points = PoolVector2Array( 1.71415, 31.2144 )
+default_color = Color( 1, 0.992157, 0.4, 1 )
+script = ExtResource( 6 )
+root_socket_path = NodePath("../TrailSocket")
+tip_socket_path = NodePath("../TrailSocket2")
+max_lifetime = 0.25
+taper_end_width_ratio = 0.7
+trail_gradient = SubResource( 3 )
+flow_speed = 3.8
+
+[node name="TrailSocket" type="Position2D" parent="Sprite" index="4"]
+position = Vector2( 65.7858, -29.7144 )
+
+[node name="TrailSocket2" type="Position2D" parent="Sprite" index="5"]
+position = Vector2( 54.6429, -37.143 )
+
+[node name="Range" parent="." index="3"]
+visible = false
+
+[node name="CollisionShape2D" parent="Range" index="0"]
+shape = SubResource( 2 )
+
+[node name="ShootingBehavior" parent="." index="4"]
+script = ExtResource( 4 )
+
+[editable path="Sprite/Hitbox"]

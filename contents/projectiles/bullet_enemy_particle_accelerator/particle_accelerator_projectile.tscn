@@ -1,0 +1,259 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/cp_particle_accelerator_projectile.png" type="Texture" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/cp_particle_accelerator_projectile_start.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/cp_enemy_bullet_frame_0000.png" type="Texture" id=3]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/cp_particle_accelerator_projectile_end.png" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/enemy_particle_accelerator_projectile.gd" type="Script" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/cp_bullet_enemy.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 135.75, 22.5 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Contents:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("EndContainer:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StartContainer:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fire"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Contents:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 1.2, 1.6, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 0.1 ), Vector2( 1, 0.8 ), Vector2( 1, 1e-05 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.95 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "stop"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("EndContainer:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.2, 1.6, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.1 ), Vector2( 1, 0.8 ), Vector2( 1, 1e-05 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StartContainer:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.2, 1.6, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.1 ), Vector2( 1, 0.8 ), Vector2( 1, 1e-05 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("Contents/Hitbox")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "disable"
+}, {
+"args": [  ],
+"method": "enable"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("EndContainer/EndProjecitle:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("StartContainer/StartProjectile:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Contents/Sprite:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Contents/frame:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Contents/Sprite2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1.2, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Contents/Hitbox:deals_damage")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="StartContainer" type="Node2D" parent="."]
+position = Vector2( -100, 0 )
+
+[node name="StartProjectile" type="Sprite" parent="StartContainer"]
+visible = false
+position = Vector2( -15, -28 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="EndContainer" type="Node2D" parent="."]
+position = Vector2( 91, 0 )
+
+[node name="EndProjecitle" type="Sprite" parent="EndContainer"]
+visible = false
+position = Vector2( -32, -28 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Contents" type="Node2D" parent="."]
+position = Vector2( -9, 0 )
+
+[node name="Sprite" type="Sprite" parent="Contents"]
+unique_name_in_owner = true
+visible = false
+position = Vector2( -21, -28 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="Contents"]
+unique_name_in_owner = true
+visible = false
+position = Vector2( -90, 0 )
+scale = Vector2( 1, 1.25 )
+texture = ExtResource( 7 )
+
+[node name="Hitbox" parent="Contents" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+position = Vector2( 0, 1 )
+collision_layer = 16
+deals_damage = false
+
+[node name="Collision" parent="Contents/Hitbox" index="0"]
+position = Vector2( 33.25, -1 )
+shape = SubResource( 1 )
+
+[node name="frame" type="Sprite" parent="Contents"]
+unique_name_in_owner = true
+position = Vector2( -99, -16.0248 )
+scale = Vector2( 0.939929, 0.8 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+autoplay = "fire"
+anims/RESET = SubResource( 3 )
+anims/fire = SubResource( 2 )
+
+[connection signal="hit_something" from="Contents/Hitbox" to="." method="_on_Hitbox_hit_something"]
+
+[editable path="Contents/Hitbox"]

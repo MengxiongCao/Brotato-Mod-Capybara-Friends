@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraProjectileOnHitEffect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/exorcist_miko/exorcist_miko_projectile_stats.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+key = "capybara_projectile_when_x_cursed_killed"
+text_key = "effect_capybara_projectile_when_x_cursed_killed"
+value = 3
+custom_key = ""
+storage_method = 0
+effect_sign = 3
+custom_args = [  ]
+weapon_stats = ExtResource( 2 )
+auto_target_enemy = false

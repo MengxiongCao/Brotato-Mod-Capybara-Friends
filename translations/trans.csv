@@ -1,0 +1,467 @@
+key,zh_Hans_CN,en
+CHARACTER_CAPYBARA,卡皮巴拉,Capybara
+GAIN_STATS_PER_INTERVAL_WHILE_NOT_MOVING,当站立不动时，每{2}秒钟永久获得{0}{1} ,Get {0} {1} permanently every {2} second while not moving
+EFFECT_LOSE_STAT_FOR_EVERY_STEP,每行走{2}步，则{0}{1} ,{0} {1} for every {2} steps you take during a wave
+ITEM_ETERNAL_TIARA,永恒冠冕,Eternal tiara
+EFFECT_ETERNAL_TIARA,你的王冠将不会失效，无尽模式的收获衰减也将不复存在,Your crown shall never falter， and the harvest decay in Endless Mode shall cease to exist.
+ITEM_GOLDEN_PIGGY_BANK,猪猪存钱罐——永恒银行出品,Piggy bank--from eternal bank
+EFFECT_GOLDEN_PIGGY_BANK,你的猪猪存钱罐将不会失效,Your Piggy bank shall never falter
+CHARACTER_OCTOPUS,受伤的章鱼,Disabled octopus
+EFFECT_CAPYBARA_DISABLED,波次开始时，仅能拿起一把武器，每过{0}秒，将能多拿起一把武器，但受到攻击将会损失一把武器，并进入短暂的无敌状态,At wave start， you can only hold one weapon. Gain an extra weapon slot every {0} seconds， yet lose one weapon slot upon taking damage，and grants a brief invincibility state.
+EFFECT_WEAPON_SLOT_REGENERATION,回合结束时，每消耗永久的{3}{1}，恢复{4}{2}，最大不超过{0},At end of the wave，every permanently consumed {3} {1} to regenerate {4} {2} (max: {0})
+EFFECT_GAIN_GOLD_WHEN_HEAL,当治疗时，有{0}{4}概率获得{1}材料,When healed，have {0}% of chance to gain {0} material
+EFFECT_GAIN_STATS_WHEN_HEAL,当治疗时，有{0}{4} 几率，永久获得{1}{2},When healed，have {0}{4} of chance to gain {1} {2} permanently
+CHARACTER_DAJI,九尾天狐·妲己,Daji the celestial fox
+ITEM_FOXFIRE,狐火,Fox fire
+EFFECT_FOXFIRE,召唤一团狐火，狐火碰撞到敌人可造成{0}({1}) 伤害 (此伤害可以暴击，暴击伤害x2，受到%伤害影响)，并使目标燃烧，每秒造成燃烧伤害{2}x{3}({4}) ，狐火可以阻挡敌人的飞行道具， 攻击速度可以增加狐火转动的速度(上限在攻速达到100%时达到), Summon a Foxfire Orbs. When a Foxfire collides with an enemy， it deals {0} ({1}) damage and ignites the target (the damage can have crit chance and crit damage and can be influenced by percent damage)， dealing burning damage {2}x{3} ({4})，lasting for 6 seconds. Foxfires can block enemy projectiles. Attack Speed increases the rotation speed of the Foxfire(Max: 100% attack speed)
+EFFECT_FOXFIRE_BLOCK,当狐火阻挡了{3}次敌人的飞行道具和刀片后，可获得{0}{1}{2}, When a Foxfire blocks enemy projectiles and blades for {3} times， you gain {0}{1} {2}
+EFFECT_EXTRA_BAIT_EVERY_WAVE,每回合会额外生成一些意想不到的敌人(随波次增加),Each wave， some unexpected enemies will additionally spawn.(more decoys spawn as the wave number increases)
+WEAPON_RG_KNIFE,翠牙,Emerald fang
+WEAPON_CLASS_FOREST,森林,Forest
+ITEM_GOLDEN_HEART,黄金心脏,Golden heart
+EFFECT_RELIVE_CHANCE,你将获得一次复活的机会，并且复活时获得{0}{1},You will get one chance to revive，and gain {0} {1} while reviving
+EFFECT_RELIVE_BY_STATS,当你死亡时，消耗当前所有{0}复活(若{0}小于{1}，你将死亡)，复活后获得{3}({4})经验(受经验获取修改影响)以及{5}({4})材料,When you die， consume all current {0} to revive (if {0} is less than {1}， you will die). After reviving， gain {3} ({4}) experience (affected by experience gain modifiers) and {5} ({4}) materials.
+CHARACTER_ANGEL,天使,Angel
+ITEM_BROKEN_GOLDEN_HEART,破碎的黄金心脏,Broken_golden_heart
+REVIVE_TIMES_ANGEL,复活次数: {0},Revive times: {0}
+EFFECT_CHANCE_CHARM,击中敌人时，有{1}%({2})的几率，使其在{3}秒内魅惑,On hit， has a {1}% ({2}) chance to Charm the target for {3}s
+WEAPON_HARP,竖琴,Harp
+CHARACTER_SENIOR_SISTER,大师姐,Senior Sister
+EFFECT_CHANGE_WAY_OF_ATTACK,你的攻击形态将发生变化，且命中敌人时产生莲刃，莲刃命中敌人造成{1}({3})，可穿透{2}个敌人,Your attack form will change. Hitting an enemy spawns Lotus Blades.Lotus Blades deal {1}({3}) damage and can penetrate {2} enemies
+WEAPON_SAINT_SWORD,灵剑,Fairy sword
+WEAPON_CLASS_SAINT,仙侠,Xianxia
+EFFECT_EXTRA_BOSS_WHEN_UPGRADE,当你每升{0}级，将经历天劫，下一波将额外生成{1}({3})个精英，最大不超过{2}个，若击杀精英或头目，将获得{9}{4}{6}(最大值:{8}),Every {0} levels， you will undergo a Heavenly Tribulation.The next wave spawns an additional {1}({3}) elites， up to a maximum of {2}.Elite or Boss kills grant {9}{4} {6}(max:{8}).
+EFFECT_GAIN_STATS_KILLED_EVERY_ENEMY_WITH_WEAPON_CLASS,当你用{1}武器每击杀{2}个战利品外星人，则可获得{0}{3},every {2} looters killed by {1} weapon grants you {0}{3}.
+EFFECT_CHANCE_GAIN_STATS_CONSUMABLE,当你食用消耗品后，有{0}{4}几率，永久获得{1}{3},When you consume a consumable， you have a {0}{4} chance to permanently gain {1} {3}.
+ITEM_DARKFISH,蓝莓味果冻,Blueberry jelly
+DARK_FISH_NAME,小蓝莓,Little Blueberry
+EFFECT_DARKFISH,生成一只小蓝莓，他会发射诅咒果冻团，造成{0}({1})伤害，可反弹{3}次，小蓝莓可以附着在其他战斗型宠物身上，且攻速变为原来的{2}倍,Summons a Little Blueberry that fires Cursed Jelly Orbs， dealing {0}({1}) damage， can bounce for {3} time(s). The Little Blueberry can attach itself to other combat pets and {2} times of self's attack speed.
+DARK_FISH_BEHAVIOUR_DESCRIPTION,"缓慢绕着地图移动，向最近的敌人射击。如果其他战斗型宠物接近，攻速增加且附着于靠近的宠物身上。
+
+这个宠物受到玩家以下属性的影响：
+- %生命窃取
+- %伤害
+- %暴击率
+- 速度
+- 弹跳
+- 贯通
+- %贯通伤害
+- %对头目伤害","Moves slowly around the map and shoots at the nearest enemy. If other combat pets approach，ts attack speed doubles and it attaches itself to the nearby pet.
+
+This pet is affected by the following player stats:
+% Life Steal
+% Damage
+% Critical Chance
+Speed
+Bounce
+Pierce
+% Pierce Damage
+% Damage to Bosses"
+ITEM_PHILOSOPHER_STONE,贤者之石,Philosopher's stone
+EFFECT_CAPYBARA_TREES,额外生成{0}棵树,Spawns extra {0} trees
+ITEM_AZURE_LOTUS,净世青莲,World-cleansing Azure Lotus
+ITEM_BROKEN_SWORD,残银,Lingering silver
+ITEM_CURSE_FORGER,诅咒炼制,Curse crafting
+EFFECT_CAPYBARA_CURSE_WEAPON,波次结束时，会随机诅咒一个未被诅咒的武器，若无武器可诅咒，则永久{0}{1},At end of the wave，randomly curse one uncursed weapon. If no weapon can be cursed， permanently {0} {1}.
+CHARACTER_CURSE_SCHOLAR,诅咒学家,Curse scholar
+EFFECT_CAPYBARA_CURSE_ITEM,当升级时，随机诅咒一个你持有的未诅咒的物品，若无物品可诅咒，则永久{0}{1},When you level up，randomly curse one uncursed item that you owned.If no item can be cursed， permanently {0} {1}.
+STATS_LOST,损失的属性: {0},Stat lost: {0}
+ITEM_CURSED,诅咒的物品: {0},Items cursed: {0}
+EFFECT_CAPYBARA_RPOJECTILE_ON_ATTACK,挥动剑刃时产生{0}剑气，造成{1}（{3}）伤害,Swinging the blade unleashes {0} sword qi， dealing {1} ({3}) damage.
+WEAPON_LOTUS_SWORD,鸿蒙莲华,Primordial Lotus Sword
+WEAPON_CLASS_PRIMORDIAL_CHAOS,鸿蒙,Primordial chaos
+WEAPON_CLASS_FUTURE,未来,Future
+WEAPON_LIGHT_SABER_PURPLE,星空恐惧,Stellar Terror
+EFFECT_CAPYBARA_RPOJECTILE_ON_ATTACK_LIGHT_SABER_PURPLE,挥动剑刃时，在敌人四周产生{0}道离子风暴，造成{1}（{3}）伤害,When swinging the blade， generate {0} ion storms around the enemy， dealing {1} ({3}) damage.
+WEAPON_LIGHT_SABER_FLAME,光剑-X型,Light Saber X
+WEAPON_LIGHT_SABER_HEAL,光剑-H型,Light Saber H
+WEAPON_LIGHT_SABER_SPEED,光剑-S型,Light Saber S
+WEAPON_FOREST_BOOK,森林之书,Forest book
+EFFECT_SPAWN_FAITY_WHEN_TREE,当一棵树死亡时，有{0}{5}几率生成一个布偶小精灵(构筑物)，能发射会追踪目标的森林魔法，造成{1}({3})伤害,When a tree dies， it has a {0}{5} chance to spawn a puppet fairy (structure).The Fairy fires tracking forest magic that deals {1} ({3}) damage.
+CHARACTER_TURRETATO,塔铃薯,Turretato
+EFFECT_TURRETATO,你和所有的炮塔都是好朋友，靠近他们，他们会愉快的围绕着你，每有一个炮塔环绕，你将会损失{0}{1}且获得{2}{3}，直至敌袭结束,You’re friends with all turrets.Approach them， and they’ll happily circle around you.But for each turret circling you， you will lose {0} {1} and gain {2} {3} until end of the wave.
+ITEM_TURRET_FAIRY,含蓄的花苞,Demure flower bud
+EFFECT_TURRET_FAIRY,生成一个布偶小精灵，发射森林魔法造成{0}({1})伤害,Generate a puppet fairy casting forest magic to deal {0} ({1}) damage.
+WEAPON_LASER_GUN_FUTURE,聆听者,Listener
+CHARACTER_GOLDEN,永恒银行的执掌者,Bearer of the Eternal Bank
+EFFECT_PET_STRUCTURE,每个宠物每{6}秒会创造{1}({2}){4}(最大值：{11})的价值(构筑物数量可以提高宠物的生产效率)，最多有{13}个宠物在工作，但回合结束时需要支付每个宠物{0}{8}作为报酬，且若资金充足(材料≥300)将花费{3}{8}扩大生产，获得{10}{5}{9}(最大值：{12}),Every pet generates {1} ({2}) {4}(max：{11}) worth of value every {6} seconds (the number of structures increases your pet's production efficiency)，a maximum of {13} pets will work， but you must pay {0} {8} per pet as wages at the end of each wave.If you have enough funds(materials ≥ 300)， spend {3} {8} to expand production and gain {10} {5} {9}(max：{12}).
+VALUE_CREATED_BY_PETS,宠物们创造的材料: {0},The materials created by pets: {0}
+EFFECT_PET_SCALING,你的宠物伤害额外受{1}的影响,Your pet's damage is additionally influenced by {1}.
+FOXFIRE_DESCRIPTION,"围绕着角色缓慢移动，攻速可以增加狐火的转动速度。
+
+这个宠物受到玩家以下属性的影响：
+- %攻击速度
+- %伤害
+- %暴击率
+- %对头目伤害","Orbiting the character slowly. Attack Speed increases the rotation speed of the fox fires.
+
+This pet is affected by the following player stats:
+% Attack Speed
+% Damage
+% Critical Strike Chance
+% Damage vs. Bosses"
+FAIRY_DESCRIPTION,"围绕着角色缓慢移动，向附近敌人发射会追踪的森林魔法。
+
+这个宠物受到玩家以下属性的影响：
+- %建筑物攻击速度","Orbits the character slowly and fires tracking forest magic at nearby enemies.
+
+This pet is affected by the following player stats:
+% Structure Attack Speed"
+ITEM_UNICORN_CAKE,彩虹蛋糕,Rainbow cake
+EFFECT_UNICORN,生成一个贪吃的独角兽，该宠物会向敌人冲刺造成{2}({3})伤害，并发射一枚冰淇淋导弹，命中敌人爆炸并产生{9}({10})伤害，当这个宠物吃掉(杀死){5}个敌人后，会获得{7}{8}，每冲刺{6}次，会释放出{4}道能量光束，每道造成{0}({1})伤害,A gluttonous unicorn that dashes toward enemies， dealing {2}({3}) damage. It launches an ice cream missile， which explodes on impact to deal {9}({10}) damage. After the unicorn devours (kills) {5} enemies， it gains {7}{8}. When it rushes for {6} times， it unleashes {4} energy beams， each dealing {0}({1}) damage.
+UNICORN_NAME,贪吃的独角兽,Gluttonous unicorn
+UNICORN_BEHAVIOUR_DESCRIPTION,"缓慢绕着地图移动，向范围内随机敌人冲刺。每隔一段时间发射数道光束。
+
+这个宠物受到玩家以下属性的影响：
+- %生命窃取
+- %伤害
+- %暴击率
+- 速度
+- 弹跳
+- 贯通
+- %贯通伤害
+- %对头目伤害","Moves slowly around the map and dashes toward a random enemy in range. Fires several beams at regular intervals.
+
+This pet is affected by the following player stats:
+% Life Steal
+% Damage
+% Critical Chance
+Speed
+Bounce
+Pierce
+% Pierce Damage
+% Damage vs. Bosses"
+ITEM_STRANGE_BOTTLE,奇怪之瓶,Strange bottle
+EFFECT_SWAMPMAN,生成{0}个沼泽人，他能复制玩家的武器(拥有玩家武器{1}{2}的伤害)，但武器效果不会重复生效，若你目前没有武器，他将会随机获得一些武器,Spawns {0} Swampman that can duplicate the player's weapons(possesses {1}{2} of the damage from the player's weapon)， but the weapon effects will not apply repeatedly.If you have no weapons currently，it will gain some random weapons.
+SWAMPMAN_NAME,沼泽人,Swampman
+SWAMPMAN_BEHAVIOUR,能够复制玩家角色的武器，并向最近的敌人进行攻击，若你目前没有武器，他将会随机获得一把武器,Swampman copies the player's weapons and targets the closest enemy to deal attacks.If you have no weapons currently，it will gain a random weapon.
+CHARACTER_SPIDER_MASTER,蜘蛛大师,Spider master
+EFFECT_CAPYBARA_ALL_SCALING,武器同时受到近战伤害，远程伤害，元素伤害，工程学的影响,Weapons are simultaneously affected by Melee Damage， Ranged Damage， Elemental Damage and Engineering.
+EFFECT_CAPYBARA_RELOAD_WHEN_DONGE,当闪避时，所有冷却中的武器立刻重启，反击敌人，发出一道剑气造成{1}({3})，穿透{2}个敌人,When dodge， all weapons on cooldown are instantly reset， and counterattack enemies.Releases a sword slash that deals {1}({3}) damage and pierces {2} enemies.
+WEAPON_BLADE_OF_DEATH,死亡之剑,Blade of death
+EFFECT_CAPYBARA_PLAYER_NO_HIT,当你没有受到任何伤害时，每过{1}秒，死亡之剑的基础伤害会增加{0}，若{2}秒内都没有受到伤害，则会在击中敌人时产生剑气，造成{3}({5})伤害，可穿透{4}个敌人,When taking no damage， the base damage of Sword of Doom increases by {0} every {1} seconds.If you remain undamaged for {2} consecutive seconds， hitting enemies will release a sword qi， dealing {3} ({5}) damage and piercing up to {4} enemies.
+ITEM_SPIDER_ALL_WEAPONS,百般武艺,Master of All Arms
+CAPYBARA_CURSED_ITEM,被诅咒的物品,cursed items
+ITEM_CURSE_SCHOLAR_BOOK,诅咒学家的笔记,Curse scholar's note
+EFFECT_CAPYBARA_PROJECTILE_PER_INTERVAL,每过{6}秒，发射出{0}({1})道诅咒魔法(最大数量:{7})，造成{2}({3})伤害,Every {6} seconds， fire {0} ({1}) cursed magic projectiles(max number:{7})， dealing {2} ({3}) damage.
+EFFECT_CAPYBARA_APPEND_NEW_SCALE,你的武器伤害会额外受到{1}影响,Your weapons' damage will be influenced by {1} additionally.
+ITEM_GOLDEN_WINGS,黄金翅膀,Golden wings
+EFFECT_HOLY_SWORD,生成一柄圣裁之剑，斩击敌人造成{0}({1})伤害，可以斩碎敌人的投射物和刀片，攻速可以增加剑刃旋转的速度，范围可以增加剑身大小,Spawns a Sword of Judgement.Slash enemies to deal {0}({1}) damage. It can shatter enemy projectiles and blades. Attack speed increases the rotation speed of the blade and range will increase the size of the blade.
+EFFECT_GAIN_ITEM_WHEN_REVIVE,当你复活时，获得{0}{1},When you revive， you will gain {0}{1}.
+ITEM_HOLY_SWORD_OF_JUDGEMENT,裁决圣剑,Holy Sword of Judgement
+HOLY_SWORD_DESCRIPTION,"围绕着角色缓慢移动，攻速可以增加剑身的转动速度。
+
+这把剑受到玩家以下属性的影响：
+- %攻击速度
+- %伤害
+- %暴击率
+- %对头目伤害","Orbiting the character slowly. Attack Speed increases the rotation speed of the sword.
+
+This sword is affected by the following player stats:
+% Attack Speed
+% Damage
+% Critical Strike Chance
+% Damage vs. Bosses"
+ITEM_ENJOY_THE_MUSIC,享受音乐,Enjoy the music
+CHARACTER_LUCKY_PUPPET,幸运人偶,Lucky puppet
+EFFECT_CAPYBARA_GAIN_CRIT_DAMAGE_BONUS_CRIT_CHANCE,每溢出{0}{1}，则会获得{2}{4}{3}({2}{5}),For every overcapped {0}{1}， gain {2}{4}{3} ({2}{5}).
+CAPYBARA_STAT_CRIT_DAMAGE,%暴击伤害,%Crit Damage
+EFFECT_GAIN_BOX_WHEN_CRIT,当你造成暴击时，有{0}{2}({1})几率生成一个奇妙的战利品，(最高几率:{3}{2}),When you land a critical hit， there is a {0}{2}({1}) chance to spawn a unexpected loot drop，(max chance: {3}{2}).
+CAPYBARA_BIG_PRIZE,大奖！,Big prize！
+EFFECT_CAPYBARA_WT,"生成1个机械蜉蝣，环绕着玩家，可以射击造成{0}({1})伤害","Summon a Mechanical Mayfly that orbits the player and fires to deal {0}({1}) damage."
+ITEM_CAPYBARA_WT,机械浮游,Mechanical Mayfly
+CAPYBARA_WT_DESCRIPTION,"围绕着角色缓慢移动，向附近敌人发射射线。
+
+这个宠物受到玩家以下属性的影响：
+- %建筑物攻击速度","Orbits the character slowly and fires ray at nearby enemies.
+
+This pet is affected by the following player stats:
+% Structure Attack Speed"
+EFFECT_WEAPON_CAPYBARA_WT,"生成{2}个机械蜉蝣","Summon {2} Mechanical Mayfly"
+CHARACTER_CP_MONSTER,怪物,Monster
+EFFECT_CP_PROJECTILES_UPGRADE,升级不再提供其他属性，而提供投射物数量(最大:{0}),Upgrades no longer grant additional attributes， and instead increase the number of projectiles (Max: {0}).
+CP_NB_OF_PROJECTILES,贝类,Shellfish
+EFFECT_CAPYBARA_THUNDER,命中敌人时，有一定几率(概率根据武器攻速动态调整)产生{3}道雷法(视为爆炸)，造成{1}({2})伤害,Upon hitting an enemy， there is a chance (scaled dynamically by weapon attack speed) to spawn {3} Thunder Magic orbs (treated as explosions)， dealing {1}({2}) damage.
+CHARACTER_JUNIOR_SISTER,小师妹,Junior Sister
+EFFECT_MONSTER_CAPYBARA_PROJECTILE_PER_INTERVAL,每过{6}秒，发射出{0}道吐息，造成{8}x{2}({3})伤害,Every {6} seconds， unleash {0} breath blasts， dealing {8}x{2} ({3}) damage.
+EFFECT_CAPYBARA_FIRE,命中敌人时，产生{0}道火焰，造成{1}({3})伤害，使敌人燃烧造成{6}x{7}({8})伤害,When hitting an enemy， summon {0} flame， dealing {1} ({3}) damage，set enemies ablaze and Inflict {6}×{7} ({8}) damage.
+EFFECT_CAPYBARA_PROJECTILE_PER_STEP,每移动{0}步，释放{1}道飓风，造成{2}({3})伤害,Every {0} steps taken， unleash {1} hurricane gusts， dealing {2} ({3}) damage.
+CP_THUNDER,天雷术,Heavenly Thunder Art
+CP_FIRE,赋火术,Flame Endowment Art
+CP_WIND,行风术,Windstride Art
+EFFECT_CP_JUNIOR_SISTER,每提升{0}级，你升级时不获得属性，而获得雷，火，风三个仙法其中之一，每种仙法最多可得:{2},For every {0} levels increased， you gain no attribute points upon leveling up， instead you obtain one of the three immortal arts: Thunder， Fire， and Wind，every kind of immortal art can be held for {2}.
+EFFECT_JUNIOR_SISTER_EFFECT,"
+天雷术:可造成{1}({2})伤害，你已习得: {0}
+赋火术:可造成{4}({5})伤害，使敌人燃烧造成{10}x{9}({11})伤害，你已习得: {3}
+行风术:可造成{7}({8})伤害，你已习得: {6}
+","
+Heavenly Thunder Art: Deals {1}({2}) damage， Learned: {0}
+Blaze Infusion Art: Deals {4}({5}) damage，set enemies ablaze and Inflict {10}×{9} ({11}) damage. Learned: {3}
+Windstride Art: Deals {7}({8}) damage， Learned: {6}
+"
+ITEM_CP_JUNIOR_SISTER_BOOK,三生诀,Sansheng Formula
+WEAPON_THREE_LIGHT_ORB,造化彩莲,Primal Cosmic Colored Lotus
+EFFECT_CAPYBARA_THREE_WEAPON_STATS,"造化彩莲的莲子会从以下三种莲子，每{0}秒会切换一次：
+火莲子:造成{1}({4})伤害；
+雷莲子:造成{5}({8})伤害，可反弹{7}次；
+风莲子：造成{9}({12})伤害，可穿透{10}个敌人；
+并依次获得以下三个效果之一：","The seeds of Primal Rainbow Lotus cycle between the following three types every {0} seconds:
+Fire Lotus Seed: Deals {1} ({4}) damage；
+Thunder Lotus Seed: Deals {5} ({8}) damage， can reflect {7} times；
+Wind Lotus Seed: Deals {9} ({12}) damage， can pierce through {10} enemies；
+It also grants one of the following three effects in order:"
+CHARACTER_CP_FURNACE,熔炉,Furnace
+EFFECT_CAPYBARA_SPAWN_TURRET_FOR_PER_STAT,每个波次开始时，每拥有{0}{8}则会生成{9}{10}[{6}{7}],At the start of each wave， every {0}{8} to summon {9}{10}[{6}{7}].
+CHARACTER_VAMPIRE_QUEEN,血族王女,Princess of the Vampire Clan
+EFFECT_CAPYBARA_VAMPIRE_QUEEN,生成一个领域(攻击范围可以增加领域的覆盖范围)，领域内每有一个敌人，则会暂时获得{5}{2}{3}[{5}{6}]，且你每恢复{4}生命，则会释放出一道血族魔法，造成{0}({1})伤害,Create a domain(Your attack range extends the coverage of the domain.). For each enemy within the domain， you temporarily gain {5}{2}{3}[{5}{6}]. Additionally， every time you restore {4} HP， you unleash a Vampire Spell that deals {0}({1}) damage.
+ITEM_CAPYBARA_LITTLE_WORLD,微型世界,Tiny world
+EFFECT_SPAWN_TREE_WHEN_EVERY_ENEMIES_KILLED,每击杀{2}个敌人，生成{0}棵树,For every {2} enemies killed， spawn {0} trees.
+TREE_SPAWNED,生成的树: {0},Tree spawned: {0}
+WEAPON_CAPYBARA_BLOOD_SWORD,血族佩剑,Sword of the Blood Clan
+EFFECT_CAPYBARA_GAIN_DAMAGE_EVERY_HEALED,当你每恢复{2}生命，则该武器的基础伤害增加{0}，直至敌袭结束,For every {2} HP restored， this weapon gains {0} base damage，util end of the wave.
+ITEM_CAPYBARA_BROKEN_COIN,惊吓硬币,Startle coin
+CHARACTER_CP_FUTURE_WARRIOR,未来骑士,Future Knight
+EFFECT_CAPYBARA_BOOST_TURRET_WHEN_NEARBY,在你周围的构筑物的攻速将变为原来的{0}倍，且每有一个构筑物在你身边，则会为你提供{2}{1},The attack speed of structures around you is multiplied by {0}， and each nearby structure grants you {2} {1}.
+CHARACTER_CP_FIRE_BEARD,火胡子,Firebeard
+EFFECT_CAPYBARA_GAIN_SPAWN_GOLD_BURNING,当燃烧的敌人死亡后，额外生成{0}材料,Upon the death of a burning enemy， spawn an extra {0} materials.
+CHARACTER_CP_SPIRIT_GATHERER,集灵师,Spirit Gatherer
+CP_NUMBER_OF_ENEMIES,大蒜,Garlic
+EFFECT_CP_NUMBER_OF_ENEMIES_UPGRADE,前{0}级，你将不再获得其他属性，而获得{1},"For the first {0} levels, you gain no regular stats and instead gain {1}."
+STAT_CAPYBARA_ENEMIES_KILLED,波次内击杀的敌人,enemies killed this wave
+STAT_CAPYBARA_GOLD,材料,materials
+ITEM_CP_EVER_LASTING_LAMP,长明灯,everlasting lamp
+CAPYBARA_BURNING_DURATION,燃烧持续时间延长{0}秒,Burning duration last for another {0} seconds.
+ITEM_CP_FIRE_BLADE,㷰火剑,Blazeleaf Sword
+CAPYBARA_BURNING_CAN_CRIT,燃烧可以暴击，暴击伤害x{0},Burning damage can crit， crit damage:x{0}.
+CHARACTER_CP_FOREST_GIRL,森林之女,Forest Nymph
+EFFECT_CAPYBARA_NO_HURT_TREE,树无法被破坏,Trees cannot be destroyed.
+EFFECT_CAPYBARA_TREES_CAN_ATTACK,当你在树的附近，你的树会为你而战，每{0}秒向敌人发射投射物，造成{1}({3})伤害,While near trees， your trees fight for you and fire projectiles at enemies every {0} seconds， dealing {1} ({3}) damage.
+EFFECT_CAPYBARA_START_WITH_X_TREES,波次开始时在你身边生成{0}树,Spawn {0} trees around you at the beginning of wave.
+CHARACTER_CP_MASTER,师尊,Master
+CAPYBARA_THUNDER,当你的武器击中敌人时有{0}%几率产生{3}个爆炸，造成{1}({2})伤害,When your weapon hits an enemy， there is a {0}% chance to spawn {3} explosions that deal {1} ({2}) damage.
+EFFECT_CHANGE_WAY_OF_ATTACK_MASTER,你的攻击形态将发生变化,Your attack form will change.
+CAPYBARA_CAN_NOT_LEVEL_UP,这个角色无法升级,This character can not be leveled up
+CAPYBARA_EXTRA_BOSS_FOR_X_ENEMIES,每在波次内击杀{0}个敌人，将会生成一个头目或者精英,Every {0} enemies slain during the wave， spawn a boss or elite.
+CAPYBARA_HIT_PROTECTION_FOR_X_ENEMIES,每在波次内击杀{0}个敌人，将会获得一次伤害保护,Every {0} enemies slain during the wave， gain a hit protection.
+WEAPON_CP_GOLDEN_LOTUS_SWORD,无尘剑,Unsullied Sword
+EFFECT_CAPYBARA_PLAYER_NO_HIT_CRIT,当你没有受到任何伤害时，每过{1}秒，无尘剑的暴击伤害增加{0}{7},While taking no damage， this sword gains {0}{7} critical damage every {1} seconds.
+EFFECT_CALL_FOR_LOVE,当一个敌人被魅惑时，会额外掉落{0}材料,When an enemy is charmed， it will drop {0} additional materials.
+ITEM_CP_CALL_FOR_LOVE,以爱之名,Call for love
+CAPYBARA_CHARM_TIME,魅惑的持续时间延长{0}秒,Extends charm duration by {0} seconds.
+ITEM_CAPYBARA_ANGEL,卡皮礼盒,Capy Gift Box
+EFFECT_CAPYBARA_ANGEL,生成一只卡皮小天使，他会向周围的敌人射箭，造成{0}({1})伤害，有{2}{4}几率为魅惑箭，使敌人魅惑持续{5}秒,Summons a tiny capybara angel that fires arrows at nearby enemies， dealing {0}({1}) damage. Each shot has a {2}{4} chance to fire a charm arrow， which charms enemies for {5} seconds.
+CAPYBARA_ANGEL_NAME,卡皮小天使,Capybara Angel
+CAPYBARA_ANGEL_BEHAVIOUR_DESCRIPTION,"追随玩家移动，向周围敌人射出箭矢，魅惑敌人。
+
+这个宠物受到玩家以下属性的影响：
+- %生命窃取
+- %伤害
+- %暴击率
+- 速度
+- 弹跳
+- 贯通
+- %贯通伤害
+- %对头目伤害","Follows the player and fires arrows at nearby enemies, charming them.
+
+This pet benefits from the following player stats:
+- % Life Steal
+- % Damage
+- % Critical Chance
+- Speed
+- Bounce
+- Piercing
+- % Piercing Damage
+- % Damage Against Bosses"
+ENEMIES_CHARMED,魅惑的敌人：{0},Enemies charmed：{0}
+ITEM_CP_DAJI_GIFT,九尾信物,Nine-Tailed Talisman
+EFFECT_CAPYBARA_CHARMED_ENEMIES_CAN_ATTACK,被魅惑的敌人每过{0}秒，会向附近未被魅惑的敌人释放刀片，造成{1}({3})伤害,Charmed enemies release blades toward nearby non-charmed enemies every {0} seconds， dealing {1} ({3}) damage.
+CHARACTER_CP_COMET_COWBOY,彗星牛仔,Comet Cowboy
+CAPYBARA_NO_BOUNCE_DECREASE,投射物的弹射将没有伤害衰减,Projectile bounces deal full damage with no falloff.
+EFFECT_CAPYBARA_GAIN_STAT_WHEN_ATTACK_KILLED_ENEMIES,用武器一次性每击杀{2}敌人则获得{0}{1},Gain {0}{1} for every {2} enemies eliminated in a single weapon strike.
+ITEM_CP_SOUL_FLAG,万魂幡,Banner of souls
+EFFECT_CAPYBARA_SPAWN_PETS_FOR_X_ENEMIES,每击杀{1}个敌人，将会生成{0}个{3}(最大值：{4}),For every {1} enemies killed，spawn {0} {3} (max：{4}).
+ITEM_CAPYBARA_PET_SOUL,诡异烛台,Eerie Candlestick
+CAPYBARA_PET_SOUL_NAME,灵魂,Soul
+EFFECT_CAPYBARA_PET_SOUL,生成一个灵魂，可向敌人冲刺，造成{0}({1})伤害,A soul that can dash toward enemies， dealing {0} ({1}) damage.
+CAPYBARA_PET_SOUL_BEHAVIOUR_DESCRIPTION,"向最近敌人冲刺。
+
+这个宠物受到玩家以下属性的影响：
+- %生命窃取
+- %伤害
+- %暴击率
+- 速度
+- 弹跳
+- 贯通
+- %贯通伤害
+- %对头目伤害","Target the enemies nearby.
+
+This pet benefits from the following player stats:
+- % Life Steal
+- % Damage
+- % Critical Chance
+- Speed
+- Bounce
+- Piercing
+- % Piercing Damage
+- % Damage Against Bosses"
+EFFECT_CAPYBARA_HARVESTER,生成一个收割者，挥舞镰刀对敌人造成{0}({1})伤害，波次结束时将{2}{3}{4}转化为{5},Summons a Reaper that swings its scythe to deal {0}({1}) damage to enemies. At the end of each wave， converts {2}{3}{4} into {5}.
+EFFECT_CAPYBARA_SPAWN_PETS_FOR_X_BOSS,每击杀{1}个精英或头目，将会永久生成{0}个{3}(最大值：{4}),For every {1} bosses or elites killed，permanently spawn {0} {3} (max：{4}).
+CAPYBARA_GOD_OF_DEATH_NAME,收割者,Reaper
+ITEM_CAPYBARA_SOUL_WHEAT,魂穗,Soul Wheat
+CAPYBARA_GOD_OF_DEATH_BEHAVIOUR_DESCRIPTION,"向最近敌人冲刺，挥舞镰刀攻击他们，回合结束时转化波次内击杀的敌人为某些属性。
+
+这个宠物受到玩家以下属性的影响：
+- %生命窃取
+- %伤害
+- %暴击率
+- 速度
+- 弹跳
+- 贯通
+- %贯通伤害
+- %对头目伤害","Dashes toward the nearest enemy and slashes them with its scythe. At the end of each wave, convert all foes slain during the wave into stats.
+
+This pet benefits from the following player stats:
+- % Life Steal
+- % Damage
+- % Critical Chance
+- Speed
+- Bounce
+- Piercing
+- % Piercing Damage
+- % Damage Against Bosses"
+CHARACTER_CP_TIME_TRAVELLER,时间旅者,Time Traveller
+EFFECT_CAPYBARA_FORCE_LIMIT_ITEM,商店通常销售一件{1}，但不能超过本身的数量限制，且商店最多提供：{0},The shop normally stocks one {1}， and cannot exceed its inherent quantity limit，and the shop can offer a maximum of {0}.
+STAT_CAPYBARA_WAVE_TIME,时光,time
+EFFECT_CAPYBARA_GOLD_ON_EVERY_STEP,每移动{2}步，会额外掉落{0}{1},Every {2} steps moved， drop an additional {0}{1}.
+ITEM_CP_COMBUSTION_BELLOWS,助燃风箱,Combustion bellows
+ITEM_CP_NOSTALGIC_POCKET_WATCH,怀旧时光,Nostalgic pocket watch
+EFFECT_CAPYBARA_INCREASE_WAVE_TIME,{0}{1},{0}{1}
+EFFECT_CAPYBARA_BURNING_COOLDOWN_REDUCTION,燃烧速度增加{0} ({1}),Increases burning speed by {0} ({1}).
+ITEM_CP_CATLING_GUN_COIN,猫猫银币,Cat Coin
+EFFECT_CAPYBARA_PET_COOLDOWN_REDUCTION,宠物攻击速度增加{0} ({1}),Increases pet attack speed by {0} ({1}).
+WEAPON_CP_TIME_GUN,时间枪,Time Gun
+CAPYBARA_TAKE_TIME_FOR_X_SHOT,每{0}次攻击，加速1s当前波次,Every {0} attacks taken，accelerates the current wave by 1s.
+INFO_POS_STAT_CAPYBARA_WAVE_TIME,增加{0}秒波次时间(不大于120秒),Each wave， the wave time gains {0} seconds(It cannot exceed 120 seconds).
+INFO_NEG_STAT_CAPYBARA_WAVE_TIME,减少{0}秒波次时间(不少于波次基础时间的1/3),Each wave， the wave time loses {0} seconds(It cannot drop below one-third of the base wave time).
+STAT_CAPYBARA_CRYSTAL,晶化度,Crystallization Rate
+INFO_POS_STAT_CAPYBARA_CRYSTAL,"你患有结晶症，你的攻击有{5}概率将晶化传染给敌人或者加深一层敌人的感染，晶化的敌人感染层数达到{1}后，此时攻击敌人将会破碎晶化敌人对其造成基于最大生命值{2}的伤害(精英和头目受到最大生命值{3}的伤害)；波次结束时，你拥有的物品有{6}几率被晶化；敌人有{7}概率发生某种异化，变得更加强大","You suffer from Crystallization Syndrome. Your attacks have a {5} chance to infect enemies with crystallisation or stack one additional layer of their infection. Once an infected enemy reaches {1} crystallisation stacks， hitting them shatters their crystal form， dealing damage equal to {2} of their maximum HP (Elites and Bosses take damage equal to {3} of their max HP)；At end of the wave，There is a {6} chance that items become crystallized.Enemies have a {7} chance to become aberrant, gaining greater power."
+INFO_NEG_STAT_CAPYBARA_CRYSTAL,你现在很健康，不再罹受结晶症的烦扰,You are now healthy and no longer suffer from Crystallization Syndrome.
+INFO_POS_STAT_CAPYBARA_ENEMIES_KILLED,记录波次内杀敌数量,Track the number of enemies slain during each wave
+EFFECT_STAT_CAPYBARA_CRYSTAL,{0}晶化度,{0} Crystallization Rate
+EFFECT_CAPYBARA_X_HIT,你的武器击中时额外造成{0}次伤害(造成上次攻击{2}的伤害),Weapons deal an extra {0} hits on impact ({2} damage of last hit).
+EFFECT_CAPYBARA_BOUNCE_HIT,你的武器击中时会额外对{0}个敌人造成一次伤害(伤害为上一次伤害的{2}),When your weapon lands a hit， it deals one extra instance of damage to {0} other enemies ({2} damage of last hit).
+EFFECT_CAPYBARA_BREAK_ON_HIT,你的武器在击中时有{0}概率瘫痪，一段时间后恢复,Your weapons have a {0} chance to stun targets on hit， which recover after a short duration.
+CAPYBARA_DEFECTIVE_SUBJECT_NAME,晶体崇拜者,Crystophile
+DEFECTIVE_SUBJECT_BEHAVIOUR_DESCRIPTION,一边冲刺一边向四周发射刀片,Sprints while launching blades in all directions.
+ITEM_CP_CRYSTAL_CLUSTER,晶簇,Crystal cluster
+EFFECT_CAPYBARA_LOSE_EFFECTS,这个物品已失活，但会在第{2}波结束时繁殖出{0}个{1},This item has been deactivated，but it will propagate {0} {1} at the end of wave {2}.
+CAPYBARA_CRYSTAL_TREE_NAME,晶之花,Crystal Flower
+CRYSTAL_TREE_SUBJECT_BEHAVIOUR_DESCRIPTION,向玩家释放光束攻击，死后会提供晶化度,Fires a beam attack at the player. Upon death，it grants Crystallization Rate.
+EFFECT_CAPYBARA_CRYSTAL_TURRET,生成一个光棱塔，可造成{0}x{2}({1})伤害，波次结束时未使用的能量将转化为经验,Spawn a Prism Tower that deals {0}x{2}({1}) damage，unused energy will convert into experience at the end of wave.
+CP_CRYSTAL_TURRET,晶体美学,Crystalline Aesthetics
+EFFECT_CAPYBARA_ADD_ITEM,获得{0}{1},Gain {0} {1}
+EFFECT_CAPYBARA_ADD_ITEM_UPGRADES,获得{0}{1}，且有特殊的升级属性加入属性池,Grants {0} {1}， and special upgrade stats are added to the stat pool.
+ITEM_CP_CRYSTAL_TURRET_0,光棱塔,Prism Tower
+ITEM_CP_CRYSTAL_TURRET,光棱塔,Prism Tower
+CAPYBARA_CRYSTAL_STATE_UP,结晶症进入新阶段!,Crystallization Syndrome enters a new phase!
+ITEM_CAPYBARA_CRYSTAL_SWORD,结晶工艺——杀戮者,Crystallization Craft——Slayer
+EFFECT_CAPYBARA_CRYSTAL_SWORD,生成一个杀戮者，向附近敌人斩击造成{0}({1})伤害,Summon a Slayer that slashes nearby enemies for {0} ({1}) damage.
+EFFECT_CAPYBARA_TURRET_PROJECTILES,构筑物的投射物数量{0},The number of structures' projectiles {0}
+CAPYBARA_TURRET_PROJECTILES,构筑物投射物数量,The number of structures' projectiles
+CP_TURRET_PROJECTILES,三棱镜,Prism
+CP_TURRET_ATS,机械蜂鸟,Mechanical Hummingbird
+CAPYBARA_TURRET_RANGE,构筑物的攻击范围{0},The attack range of structures {0}
+CP_CRYSTAL_PET,意识链接,Mind Link
+CP_CRYSTAL_SWORD,杀戮者,Slayer
+CAPYBARA_CHOOSE_CRYSTAL,选择你的结晶流派!,Choose your Crystallization Path!
+ITEM_WANDERING_TURRET,机械浮游,Mechanical Mayfly
+CP_CRYSTAL_CHARACTER,基因辐射,Genetic Radiation
+EFFECT_CAPYBARA_WEAPON_NO_UPGRADE,这个武器无法升级,This weapon cannot be upgraded.
+ITEM_CHARACTER,未孵化的可能性,Unhatched Potential
+CAPYBARA_REJECT_CRYSTAL,拒绝,Reject
+CHARACTER_DISABLED_OCTOPUS,受伤的章鱼,Injured Octopus
+EFFECT_CAPYBARA_IS_DUPLICATED,这个物品是复制品，无法被晶化,This item is a duplicate and cannot be crystallized.
+EFFECT_CP_CRYSTAL_TURRET_UP,光棱塔的等级{0},The Prism Tower's level {0}
+CP_CRYSTAL_TURRET_UPGRADE,核心改造,Core Modification
+EFFECT_CAPYBARA_ADD_ITEM_NEXT,在下次选择时，将提供{1}(不与选择的角色相同),On your next selection， {1} will be offered (cannot be the same character as your next pick).
+CHARACTER_CP_CRYSTAL_KNIGHT,光棱剑卫,Prism Blade Sentinel
+EFFECT_CAPYBARA_LINKED_ENEMIES,晶化的敌人受到的伤害将会同步传导给所有晶化的敌人,Damage taken by any Crystallized enemy is mirrored to all other Crystallized enemies.
+EFFECT_CAPYBARA_TURRET_PIERCING,构筑物的投射物贯通{0},The structures' projectiles can have {0} piercing.
+EFFECT_CAPYBARA_TURRET_BOUNCE,构筑物的投射物弹射{0},The structures' projectiles can have {0} bouncing.
+CAPYBARA_TURRET_PIERCING,构筑物的投射物贯通,The structures' projectiles piercing.
+CAPYBARA_TURRET_BOUNCE,构筑物的投射物弹射,The structures' projectiles bouncing.
+EFFECT_CAPYBARA_RANGED_MELEE_ATTACK,你的攻击将在近战和远程之间切换，远程攻击会造成{1}({3})伤害，反弹{4}次,Your attacks toggle between melee and ranged modes. Ranged strikes deal {1} ({3}) damage and bounce {4} times.
+EFFECT_CRYSTALLIZE_WITH_STAT,当敌人受到{1}来源的攻击时，必定加深一层晶化,Enemies struck by damage from {1} will always gain 1 stack of Crystallization.
+EFFECT_STAT_WHEN_CRYSTAL_LEVEL,当结晶症感染程度加深时，有{0}{1},As Crystallization infection severity rises， gain {0} {1}.
+CAPYBARA_CRYSTAL_NULL,禁用晶化,Crystal Banned
+CAPYBARA_PET_ATTACK_SPEED,%宠物攻击速度,%Pet attack speed
+UPGRADE_CAPYBARA_PET_ATK,猫特林的双枪,Catling's Guns
+EFFECT_CAPYBARA_PET_ATTACK_SPEED,{0}{1},{0} {1}.
+ITEM_CAPYBARA_CRYSTAL_PET,共鸣,Resonance
+CHARACTER_CP_CUTE_ORANGE,可爱的胖橙,Cute Orange
+CAPYBARA_CHARACTER_SIZE,%武器和角色的尺寸,%the size of weapons and characters
+EFFECT_CAPYBARA_SUBSCRIBE,Bilibili关注“{1}”喵~,Follow “{1}” on Bilibili， meow~
+ITEM_CRYSTAL_TURRET_CHARGE,光棱塔核心能源,Prism Tower Energy Core
+ITEM_USED_CRYSTAL_USED_TURRET_CHARGE,耗尽的光棱塔核心能源,Used Prism Tower Energy Core
+EFFECT_CAPYBARA_CRYSTAL_TURRET_ENERGY,光棱塔核心能量,Crystallized Prism Tower energy
+CP_CRYSTAL_TURRET_E,储备能源,Stored Energy
+CP_CRYSTAL_ALLOY,合金改造,Alloy Rework
+ITEM_CAPYBARA_CRYSTAL_ALLOY,活体合金,Living Alloy
+CP_CRYSTAL_ALLOY_PART,合金组件,Alloy Parts
+EFFECT_CAPYBARA_PTOJECTILES_ON_DEATH,敌人死亡时发射{0}枚投射物，造成{1}({3})伤害,When an enemy dies， it fires {0} projectiles that deal {1} ({3}) damage each.
+EFFECT_CAPYBARA_APPLY_EFFECT_TO_WEAPON,为你品质最高的晶化武器锻造新的效果,Forged a new effect onto your highest-quality Crystallized weapon.
+EFFECT_CAPYBARA_PROJECTILES_ON_HIT,武器击中敌人时发射{0}枚投射物，造成{1}({3})伤害,When an enemy hit by the weapon， it fires {0} projectiles that deal {1} ({3}) damage each.
+ITEM_CRYSTAL_JELLY,活体镀层,Living Plating
+EFFECT_CRYSTALLIZE_TIER_WEAPON,晶化品质最高的一把武器，若没有武器可以让活体镀层晶化则有{0}{1},Crystallize the highest‑quality weapon，if there is no weapon to be crystallized {0}{1}.
+CHARACTER_CP_WEAPON_CREATOR,武器制造者,Weapon Creator
+EFFECT_STARTING_WITH_ALL_LEGENDARY,你可以任选一把{1}类武器开局,You may pick any {1}‑type weapon to start the run.
+EFFECT_CAPYBARA_BONUS_CURSE_FACTOR,敌人和物品被诅咒的概率有{0},Enemies and items have a {0} chance to be cursed.
+CHARACTER_CP_DRAGONTATO,龙眼皮Lyd,龙眼皮Lyd
+EFFECT_CAPYBARA_SPECIAL_DODGE,闪避方式发生变化，不再概率闪避，而每个波次开始时获得{0}({1})必定闪避,Dodge mechanics are altered. No more chance‑based dodging; you gain {0}({1}) guaranteed dodges at the start of each wave.
+EFFECT_TEMP_STAT_WHEN_DODGE,闪避时，有{0}{1}，直至敌袭结束,Upon dodging，you gain {0}{1}，until end of the wave.
+ITEM_CAPYBARA_CRYSTAL_HAWK,结晶工艺——追猎者,Crystallite Artifice — Stalker
+EFFECT_CAPYBARA_CRYSTAL_HAWK,生成{6}个追猎者，造成{0}({1})伤害，并且会俯冲向敌人，对其附加"追猎"效果：敌人在受到来自武器的伤害时会额外受到一次此伤害{2}的追加伤害,Spawn {6} Stalker that deals {0}({1}) damage. It will dive toward enemies and apply the "Hunt" effect: whenever the enemy takes damage from weapons， it additionally receives bonus damage equal to {2} of this damage.
+CP_CRYSTAL_HAWK,追猎者,Stalker
+EFFECT_STARTING_WITH_ALL_WEAPONS,以任意武器开局,May choose any weapon as starting weapon
+CHARACTER_CP_IRIDESCENT_CHIMERA,幻彩奇美拉,Iridescent Chimera
+CAPYBARA_NUMBER_OF_MERGED_CHARACTERS,融合的角色,merged characters
+CHARACTER_CP_RELIC_HUNTER,遗迹猎人,Relic Hunter
+EFFECT_CAPYBARA_RELOAD_WHEN_CRYSTAL_HAWK_ATTACK,当{1}为敌人附加"追猎"效果时，会重置所有武器的冷却,When {1} applies Hunt to an enemy，resets the cooldown of all the weapons.
+EFFECT_CAPYBARA_GAIN_STAT_WHEN_KILLED_HUNT,当击杀具有"追猎"标记的敌人时，有{0}{1},When killing an enemy marked with Hunt， has {0}{1}
+EFFECT_CAPYBARA_TREES_ADD_PROJ_TO_WEAPON,你周围每有一棵树，则会为这个武器提供{0}投射物,For every tree around you， this weapon gains {0} projectiles.
+WEAPON_CP_FOREST_BOW,森林化身,Avatar of the Forest
+EFFECT_CAPYBARA_SPAWN_SPECIAL_ITEM,击杀敌人时，有{0}概率掉落一个{1}，每个波次内最多掉落:{2}个,On killing an enemy， there is a {0} chance to drop one {1}， with a maximum of {2} drops per wave.
+EFFECT_CAPYBARA_SPAWN_SPECIAL_ITEM_NO_MAX,击杀敌人时，有{0}概率掉落一个{1},On killing an enemy， there is a {0} chance to drop one {1}.
+XP_GAINED,获取的经验：{0},Xp gained：{0}
+ITEM_MASTER_SWORDS_BOX,无尘剑匣,Pristine Sword Case
+MASTER_STORY,回首伊人凭栏处，旧景空余君不语——据说，此剑匣乃师尊旧识所赠,Where she leaned upon the rail， old vistas abide in silence. Said to be a gift from the master’s old acquaintance.
+EFFECT_GAIN_WEAPONS_WHEN_SELECTION,在初始选择时，可获得{0}{1},Gain {0} {1} upon initial selection.
+CAPYBARA_MERGED_CHARACTER,基因片段,Shard of Gene
+CHARACTER_CP_CYBER_SWORD_SAINT,赛博剑仙,Cyber Xian
+EFFECT_RELOAD_WHEN_CRYSTAL_SWORD_KILLED,当{1}击杀敌人时，重置所有炮塔的冷却,When {1} kills an enemy， resets the cooldown of all turrets.
+CHARACTER_CP_TIME_MERCHANT,时间商人,Time Merchant
+EFFECT_CAPYBARA_STAT_SHOP,商店的物品需要用{1}购买，可以借贷{0}{1},Items in the shop must be purchased with {1}，can take out a loan of {0}{1}.
+CHARACTER_CP_LONG_TONGUE,彩色长舌,Colorful Long Tongue
+EFFECT_RELOAD_WHEN_CONSUMABLE,在捡起消耗品时重置武器冷却,Picking up a consumable resets the cooldown of all your weapons.
+EFFECT_ENEMY_MUST_FRUIT_DROPS,击杀敌人必定掉落消耗品,Killing an enemy always drops a consumable.
+EFFECT_LOSE_PERCENT_HP_PER_SECOND,每秒损失{0}最大生命值,Lose {0} max HP per second.
+EFFECT_CAPYBARA_PROJECTILE_WHEN_CONSUMABLE,当食用消耗品后，会吐出消耗品攻击敌人，造成{1}({3})伤害,When eating a consumable， spit out a consumable to attack enemies， dealing {1} ({3}) damage.
+EFFECT_ENEMY_CHANCE_FRUIT_DROPS,{0}击杀敌人掉落消耗品的概率,{0} chance to drop a consumable when killing an enemy.
+WEAPON_CP_DRAGON_FLAME_SHOOTER,龙炎,Loong Flame
+CHARACTER_CP_EXORCIST_MIKO,除魔巫女,Exorcist Miko
+EFFECT_CAPYBARA_RELOAD_WHEN_CURSED_KILLED,击杀诅咒的敌人时重置所有武器的冷却,Killing a cursed enemy resets the cooldown of all the weapons.
+CAPYBARA_BONUS_DAMAGE_AGAINST_CURSED,%对诅咒敌人的伤害,% damage against cursed enemies.
+EFFECT_CAPYBARA_BONUS_CURSE_ENEMY,敌人被诅咒的概率有{0},Enemies have a {0} chance to be cursed.
+EFFECT_CAPYBARA_BONUS_DAMAGE_AGAINST_CURSED,{0}{1},{0}{1}
+EFFECT_CAPYBARA_CURSE_BOSSES,精英和头目也会被诅咒,Elites and bosses can also be cursed.
+EFFECT_CAPYBARA_PROJECTILE_WHEN_X_CURSED_KILLED,每击杀{0}个诅咒的敌人，则会释放一次樱落，造成{1}({3})伤害,For every {0} cursed enemies killed， release a Sakura Fall， dealing {1} ({3}) damage.
+WEAPON_CLASS_SAINT_NEW,仙侠,Xianxia
+WEAPON_CP_SAKURA_BLADE,樱之殇,Sakura's Elegy
+WEAPON_CLASS_CURSE_KILLER,驱魔,Exorcism
+CAPYBARA_CURSED_ENEMIES,诅咒的敌人,cursed enemies
+CHARACTER_CP_UNCLE_ZHANG,沉稳的张叔叔,Composed Uncle Zhang
+EFFECT_CAPYBARA_INCREASE_THE_CHANCE_OF_ITEM,{1}在商店中出现的概率有{0},{1} has a {0} chance to appear in the shop.
+EFFECT_CAPYBARA_REPLACE_UPGRADES_WITH_LIMITED_ITEMS,升级不再获得属性，而提升某个独特物品在商店中出现的概率,Leveling up no longer grants stats， but instead increases the chance of a unique item appearing in the shop.
+EFFECT_CAPYBARA_INCREASE_THE_CHANCE_OF_ITEM_SUM,目前{1}在商店中出现的概率有{0},{1} currently has a {0} chance to appear in the shop.
+EFFECT_CAPYBARA_PRICE_OF_UNIQUE,独特道具的价格有{0},Unique items cost {0}.
+EFFECT_CAPYBARA_CHARGE_TURRET,生成一个光棱能源站，当持有者在其周围时(与构筑物范围有关)，每{0}秒提供一个光棱塔核心能源,Spawns a Prism Energy Station that provides one Prism Tower core energy every {0} seconds while the owner stands near it (according to the range of the structure).

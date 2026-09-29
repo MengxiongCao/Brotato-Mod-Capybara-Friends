@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://resources/shaders/outline.gdshader" type="Shader" id=1]
+[ext_resource path="res://weapons/weapon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/Three_Lights_Divine_Orb/three_lights_orb.gd" type="Script" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/Three_Lights_Divine_Orb/cp_weapon_lotus.png" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/Three_Lights_Divine_Orb/cp_fire_orb.png" type="Texture" id=5]
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/width = 2.0
+shader_param/alpha = 1.0
+shader_param/desaturation = 0.0
+shader_param/texture_size = Vector2( 0, 0 )
+shader_param/outline_color_0 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_1 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_2 = Color( 0, 0, 0, 0 )
+shader_param/outline_color_3 = Color( 0, 0, 0, 0 )
+
+[sub_resource type="CircleShape2D" id=1]
+resource_local_to_scene = true
+radius = 72.4431
+
+[sub_resource type="Animation" id=5]
+resource_name = "change"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite/Sprite2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite/Sprite2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1.51572, 0.435276 ),
+"update": 0,
+"values": [ Vector2( 0, -30.1746 ), Vector2( 0, -50 ), Vector2( 0, -30.1746 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Muzzle:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -30 ), Vector2( 0, -50 ), Vector2( 0, -30 ) ]
+}
+
+[node name="ThreeLightsOrb" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+outline_shader_mat = SubResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+scale = Vector2( 0.894792, 0.894792 )
+texture = ExtResource( 4 )
+
+[node name="Muzzle" parent="Sprite" index="1"]
+position = Vector2( 0, -34.4612 )
+
+[node name="Attach" parent="Sprite" index="2"]
+position = Vector2( 0, 0.728937 )
+
+[node name="Sprite2" type="Sprite" parent="Sprite" index="3"]
+position = Vector2( 0, -36.4768 )
+scale = Vector2( 0.76, 0.76 )
+texture = ExtResource( 5 )
+
+[node name="Range" parent="." index="3"]
+visible = false
+
+[node name="CollisionShape2D" parent="Range" index="0"]
+position = Vector2( 1, -1 )
+shape = SubResource( 1 )
+
+[node name="ShootingBehavior" parent="." index="4"]
+position = Vector2( 0.950005, 0.950005 )
+
+[node name="Timer" type="Timer" parent="." index="5"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+autoplay = "idle"
+anims/change = SubResource( 5 )
+anims/idle = SubResource( 6 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="Sprite/Hitbox"]

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://items/global/item_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/nostalgic_pocket_watch/nostalgic_pocket_watch_effect_0.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/nostalgic_pocket_watch/nostalgic_pocket_watch_appearance.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/nostalgic_pocket_watch/cp_nostalgic_pocket_watch_icon.png" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "item_cp_nostalgic_pocket_watch"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 4 )
+name = "ITEM_CP_NOSTALGIC_POCKET_WATCH"
+tier = 0
+value = 10
+effects = [ ExtResource( 2 ) ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = 20
+item_appearances = [ ExtResource( 3 ) ]
+tags = [ "capybara_wave_time" ]

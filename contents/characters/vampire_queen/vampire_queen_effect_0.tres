@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraBloodWings.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/blood_aura/vampire_queen_weapon_stats.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/blood_aura/blood_aura.tscn" type="PackedScene" id=3]
+
+[resource]
+script = ExtResource( 1 )
+key = "stat_lifesteal"
+text_key = "EFFECT_CAPYBARA_VAMPIRE_QUEEN"
+value = 1
+custom_key = ""
+storage_method = 0
+effect_sign = 0
+custom_args = [  ]
+scene = ExtResource( 3 )
+is_structure = false
+weapon_stats = ExtResource( 2 )
+aura_range = 100
+blood_need = 10
+enemies_in_aura = 0

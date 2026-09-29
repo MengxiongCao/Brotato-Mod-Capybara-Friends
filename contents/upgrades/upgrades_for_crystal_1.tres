@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/turret_percent_damage/upgrade_turret_per_dmg_data.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/turret_range/upgrade_turret_r_data.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/upgrades_for_crystal.gd" type="Script" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/turret_projectiles/upgrade_turret_projectiles_data.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/turret_attack_speed/upgrade_turret_ats_data.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/turret_piercing/upgrade_turret_piercing_data.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/turret_bounce/upgrade_turret_bounce_data.tres" type="Resource" id=7]
+
+[resource]
+script = ExtResource( 3 )
+upgrades_for_crystal = [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 7 ) ]

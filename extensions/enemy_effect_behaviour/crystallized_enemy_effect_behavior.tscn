@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://weapons/melee_sounds/glass_smashable_small_break_01.wav" type="AudioStream" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/extensions/enemy_effect_behaviour/crystallized_enemy_effect_behavior.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/extensions/enemy_effect_behaviour/effect_resource/capybara_break_particles.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/extensions/enemy_effect_behaviour/effect_resource/cp_crystal_particle.png" type="Texture" id=4]
+[ext_resource path="res://weapons/melee_sounds/glass_smashable_small_break_02.wav" type="AudioStream" id=5]
+[ext_resource path="res://weapons/melee_sounds/glass_smashable_small_break_03.wav" type="AudioStream" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/capybara_link_laser.gd" type="Script" id=7]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.0529801, 0.238411, 0.370861, 0.549669, 0.695364, 0.807947, 1 )
+colors = PoolColorArray( 1, 1, 1, 0.94902, 1, 0.664063, 0.664063, 1, 1, 0.934937, 0.679688, 1, 0.660156, 1, 0.808838, 1, 0.59375, 0.847656, 1, 1, 0.771484, 0.542969, 1, 1, 1, 1, 1, 0.843137 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.0804598, 0.16092, 0.218391, 0.304598, 0.396552, 0.488506, 0.597701, 0.689655, 0.770115, 0.83908, 0.908046, 1 )
+colors = PoolColorArray( 1, 0.394531, 0.394531, 1, 1, 0.978485, 0.449219, 1, 0.410156, 1, 0.806458, 1, 0.261719, 0.896179, 1, 1, 0.860168, 0.691406, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.828308, 0.621094, 1, 1, 0.371094, 0.82312, 1, 1, 0.644531, 1, 0.950012, 1, 0.995789, 1, 0.460938, 1, 1, 0.347656, 0.347656, 1 )
+
+[node name="CrystallizedEnemyEffectBehavior" type="Node2D"]
+script = ExtResource( 2 )
+crystal_outline = Color( 0.929412, 0.929412, 0.929412, 0.694118 )
+break_sound = [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ) ]
+break_particles = ExtResource( 3 )
+
+[node name="break_particles" parent="." instance=ExtResource( 3 )]
+lifetime = 0.4
+lifetime_randomness = 0.0
+initial_velocity = 800.0
+scale_amount = 1.0
+color = Color( 1, 1, 1, 1 )
+
+[node name="CrystalParticles" type="CPUParticles2D" parent="."]
+material = SubResource( 1 )
+amount = 3
+texture = ExtResource( 4 )
+flag_align_y = true
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 20.0
+scale_amount = 0.5
+scale_amount_random = 0.5
+color = Color( 0.8, 0.8, 0.8, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="capybara_link_laser" type="Line2D" parent="."]
+width = 25.0
+script = ExtResource( 7 )
+fade_duration = 0.1
+initial_alpha = 0.7
+laser_gradient = SubResource( 3 )
+endpoint_radius_scale = 0.8

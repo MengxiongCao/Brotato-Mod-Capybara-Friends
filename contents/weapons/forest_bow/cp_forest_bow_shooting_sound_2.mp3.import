@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_forest_bow_shooting_sound_2.mp3-69acd5a95f51eca7040d5b96e13bb285.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/weapons/forest_bow/cp_forest_bow_shooting_sound_2.mp3"
+dest_files=[ "res://.import/cp_forest_bow_shooting_sound_2.mp3-69acd5a95f51eca7040d5b96e13bb285.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

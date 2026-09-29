@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/master/master_effect_projectile.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraProjectileOnHitEffect.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/upgrades/fire/fire_2_burning_data.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 2 )
+key = "change_way_of_attack"
+text_key = "EFFECT_CHANGE_WAY_OF_ATTACK_MASTER"
+value = 1
+custom_key = "master"
+storage_method = 1
+effect_sign = 3
+custom_args = [  ]
+weapon_stats = ExtResource( 1 )
+auto_target_enemy = true
+burning_stats = ExtResource( 3 )

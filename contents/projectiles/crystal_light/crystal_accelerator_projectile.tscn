@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/cp_particle_accelerator_projectile.png" type="Texture" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/crystal_light/crystal_particle_accelerator_projectile.gd" type="Script" id=2]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_enemy_particle_accelerator/cp_bullet_enemy.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 136.25, 61.6667 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Contents:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "end"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Contents:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.3 ), Vector2( 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "stop"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fire"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Contents:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.667, 0.5 ), Vector2( 2, 1 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 685.026
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Contents" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Contents"]
+unique_name_in_owner = true
+position = Vector2( -1.00001, 0 )
+scale = Vector2( 2.83516, 1 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 0, -26.5 )
+
+[node name="Sprite2" type="Sprite" parent="Contents"]
+unique_name_in_owner = true
+position = Vector2( -1, 0 )
+scale = Vector2( 0.8, 1.6 )
+texture = ExtResource( 7 )
+
+[node name="Hitbox" parent="Contents" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+position = Vector2( 86, 1 )
+collision_layer = 8
+
+[node name="Collision" parent="Contents/Hitbox" index="0"]
+position = Vector2( 33.75, 4 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+autoplay = "fire"
+anims/RESET = SubResource( 3 )
+anims/end = SubResource( 5 )
+anims/fire = SubResource( 2 )
+
+[node name="TargetTriggerHitbox" parent="." instance=ExtResource( 4 )]
+unique_name_in_owner = true
+visible = false
+collision_layer = 8
+deals_damage = false
+
+[node name="Collision" parent="TargetTriggerHitbox" index="0"]
+position = Vector2( -1, 0 )
+shape = SubResource( 4 )
+
+[connection signal="hit_something" from="Contents/Hitbox" to="." method="_on_Hitbox_hit_something"]
+[connection signal="hit_something" from="TargetTriggerHitbox" to="." method="_on_TargetTriggerHitbox_hit_something"]
+
+[editable path="Contents/Hitbox"]
+[editable path="TargetTriggerHitbox"]

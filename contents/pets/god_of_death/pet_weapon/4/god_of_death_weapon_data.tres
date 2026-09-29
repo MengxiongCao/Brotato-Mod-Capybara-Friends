@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/god_of_death/pet_weapon/4/melee_weapon_stats.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/god_of_death/pet_weapon/god_of_death_weapon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/god_of_death/pet_weapon/cp_god_of_death_weapon.png" type="Texture" id=3]
+[ext_resource path="res://items/global/weapon_data.gd" type="Script" id=4]
+
+[resource]
+script = ExtResource( 4 )
+my_id = "weapon_god_of_death_weapon"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 3 )
+name = "WEAPON_LIGHT_SABER_PURPLE"
+tier = 3
+value = 200
+effects = [  ]
+tracking_text = ""
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+weapon_id = "weapon_lightning_saber_purple"
+type = 0
+sets = [  ]
+scene = ExtResource( 2 )
+stats = ExtResource( 1 )
+add_to_chars_as_starting = [  ]

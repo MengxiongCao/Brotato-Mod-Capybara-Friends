@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/capybara_no_light_burning_particles.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/lotus_burning_blue_gradient.tres" type="Gradient" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/lotus_blade_wave/cp_lotus_blade_wave.png" type="Texture" id=6]
+
+[node name="LotusBladeWaveProjectile" instance=ExtResource( 1 )]
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( -9, -2.5 )
+scale = Vector2( 1.525, 1.21875 )
+texture = ExtResource( 6 )
+
+[node name="Hitbox" parent="." index="1"]
+position = Vector2( -18, 1 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 19, -2 )
+
+[node name="CPBurningParticles" parent="Hitbox" index="1" instance=ExtResource( 2 )]
+position = Vector2( 77, 0 )
+local_coords = false
+emission_sphere_radius = 100.0
+scale_amount = 2.0
+color_ramp = ExtResource( 3 )
+
+[editable path="Hitbox"]

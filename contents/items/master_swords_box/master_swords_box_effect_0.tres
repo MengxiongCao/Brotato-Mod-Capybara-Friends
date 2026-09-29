@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://items/global/effect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "weapon_cp_golden_lotus_sword"
+text_key = "effect_gain_weapons_when_selection"
+value = 6
+custom_key = "capybara_gain_weapons_when_selection"
+storage_method = 1
+effect_sign = 0
+custom_args = [  ]

@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cp_harp_shot.wav-67121bdeb4fb7499eeb70db587b39401.sample"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/weapons/harp/cp_harp_shot.wav"
+dest_files=[ "res://.import/cp_harp_shot.wav-67121bdeb4fb7499eeb70db587b39401.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

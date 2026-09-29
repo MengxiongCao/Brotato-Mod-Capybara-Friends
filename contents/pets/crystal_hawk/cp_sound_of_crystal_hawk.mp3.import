@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_sound_of_crystal_hawk.mp3-aa19fb391113fb255ccf82223e5c226d.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/pets/crystal_hawk/cp_sound_of_crystal_hawk.mp3"
+dest_files=[ "res://.import/cp_sound_of_crystal_hawk.mp3-aa19fb391113fb255ccf82223e5c226d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

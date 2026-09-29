@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/UnicornEffect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/unicorn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/unicorn_weapon_stats.tres" type="Resource" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/unicorn_ranged_stats.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/ice_cream_stats.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+key = ""
+text_key = "EFFECT_UNICORN"
+value = 1
+custom_key = "capybara_unicorn_effect"
+storage_method = 0
+effect_sign = 0
+custom_args = [  ]
+scene = ExtResource( 2 )
+is_structure = false
+melee_weapon_stats = ExtResource( 3 )
+ranged_weapon_stats = ExtResource( 4 )
+ice_cream_stats = ExtResource( 5 )
+light_count = 7
+enemy_needed = 15
+interval = 3
+value_gain = 1

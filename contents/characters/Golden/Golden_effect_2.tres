@@ -1,0 +1,100 @@
+[gd_resource type="Resource" load_steps=13 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/PetStructureGold.gd" type="Script" id=1]
+[ext_resource path="res://items/global/custom_arg.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+arg_index = 0
+arg_sign = 1
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+arg_index = 4
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+arg_index = 1
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+arg_index = 6
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 2 )
+arg_index = 10
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 2 )
+arg_index = 9
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 2 )
+arg_index = 5
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 2 )
+arg_index = 11
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 2 )
+arg_index = 12
+arg_sign = 0
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 2 )
+arg_index = 13
+arg_sign = 4
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[resource]
+script = ExtResource( 1 )
+key = "the_golden"
+text_key = "EFFECT_PET_STRUCTURE"
+value = -10
+custom_key = "capybara_pet_structure_gold"
+storage_method = 1
+effect_sign = 3
+custom_args = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ]
+scale_structure = 25
+scale_gold = -100
+interval = 5
+max_gold = 25
+max_weapon_slot = 12
+max_work_pets = 10

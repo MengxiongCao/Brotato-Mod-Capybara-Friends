@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://mods-unpacked/Dbear-Capybara/translations/trans.zh_Hans_CN.translation", "res://mods-unpacked/Dbear-Capybara/translations/trans.en.translation" ]
+
+source_file="res://mods-unpacked/Dbear-Capybara/translations/trans.csv"
+dest_files=[ "res://mods-unpacked/Dbear-Capybara/translations/trans.zh_Hans_CN.translation", "res://mods-unpacked/Dbear-Capybara/translations/trans.en.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

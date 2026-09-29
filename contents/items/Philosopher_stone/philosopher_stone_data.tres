@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=8 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/Philosopher_stone/philosopher_stone_effect_0.tres" type="Resource" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/Philosopher_stone/cp_Philosopher_stone.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/Philosopher_stone/philosopher_stone_effect_2.tres" type="Resource" id=3]
+[ext_resource path="res://items/global/item_data.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/Philosopher_stone/philosopher_stone_effect_1.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/Philosopher_stone/philosopher_stone_effect_3.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/Philosopher_stone/philosopher_stone_appearance.tres" type="Resource" id=7]
+
+[resource]
+script = ExtResource( 4 )
+my_id = "item_philosopher_stone"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 2 )
+name = "ITEM_PHILOSOPHER_STONE"
+tier = 2
+value = 120
+effects = [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 5 ) ]
+tracking_text = "MATERIALS_GAINED"
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = 1
+item_appearances = [ ExtResource( 7 ) ]
+tags = [ "stat_hp_regeneration", "stat_lifesteal" ]

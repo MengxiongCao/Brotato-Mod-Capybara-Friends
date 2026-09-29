@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://effects/items/double_key_value_effect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "weapon_class_musical"
+text_key = "EFFECT_GAIN_STATS_KILLED_EVERY_ENEMY_WITH_WEAPON_CLASS"
+value = 10
+custom_key = "gain_stats_every_killed_enemy_with_weapon_class"
+storage_method = 1
+effect_sign = 3
+custom_args = [  ]
+key2 = "stat_luck"
+value2 = 1

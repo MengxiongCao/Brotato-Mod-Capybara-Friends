@@ -1,0 +1,54 @@
+[gd_resource type="Resource" load_steps=28 format=2]
+
+[ext_resource path="res://items/characters/character_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/golden_skin_appearance.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/cp_golden_king_icon.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/Golden_effect_0.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/Golden_effect_1.tres" type="Resource" id=5]
+[ext_resource path="res://weapons/melee/screwdriver/1/screwdriver_data.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/golden_eyes_appearance.tres" type="Resource" id=7]
+[ext_resource path="res://weapons/melee/pruner/1/pruner_data.tres" type="Resource" id=8]
+[ext_resource path="res://items/all/bonk_dog/bonk_dog.tres" type="Resource" id=9]
+[ext_resource path="res://items/all/catling_gun/catling_gun.tres" type="Resource" id=10]
+[ext_resource path="res://items/all/bot_o_mine/bot_o_mine.tres" type="Resource" id=11]
+[ext_resource path="res://items/all/blazemander/blazemander.tres" type="Resource" id=12]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/dark_fish/dark_fish_data.tres" type="Resource" id=13]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/light_saber_speed/1/light_saber_speed_2_data.tres" type="Resource" id=14]
+[ext_resource path="res://weapons/melee/wrench/1/wrench_data.tres" type="Resource" id=15]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/light_saber_heal/1/light_saber_heal_2_data.tres" type="Resource" id=16]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/light_saber_flame/1/light_saber_orange_2_data.tres" type="Resource" id=17]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/forest_book/1/forest_book_data.tres" type="Resource" id=18]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/laser_gun_future/1/laser_gun_future_1_data.tres" type="Resource" id=19]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/Golden_effect_2.tres" type="Resource" id=21]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/Golden_effect_3.tres" type="Resource" id=22]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/golden_effect_8.tres" type="Resource" id=23]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/golden_effect_newde.tres" type="Resource" id=24]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/unicorn/unicorn_data.tres" type="Resource" id=25]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/golden_effect_group.tres" type="Resource" id=26]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/Golden_effect_3a.tres" type="Resource" id=27]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/Golden/Golden_effect_3b.tres" type="Resource" id=28]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "character_golden"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 3 )
+name = "CHARACTER_GOLDEN"
+tier = 0
+value = 1
+effects = [ ExtResource( 21 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 27 ), ExtResource( 28 ) ]
+tracking_text = "value_created_by_pets"
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = -1
+item_appearances = [ ExtResource( 2 ), ExtResource( 7 ) ]
+tags = [ "structure", "pet" ]
+wanted_tags = [ "structure", "pet" ]
+banned_item_groups = [  ]
+banned_items = [  ]
+banned_upgrades = [  ]
+starting_weapons = [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 19 ) ]
+starting_items = [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 25 ) ]

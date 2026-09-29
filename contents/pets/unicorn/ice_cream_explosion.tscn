@@ -1,0 +1,126 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://projectiles/rocket/explosion.png" type="Texture" id=1]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://projectiles/player_explosion.gd" type="Script" id=3]
+[ext_resource path="res://particles/explosion_smoke.tscn" type="PackedScene" id=4]
+[ext_resource path="res://projectiles/rocket/explosion_small_short_01.wav" type="AudioStream" id=5]
+[ext_resource path="res://projectiles/rocket/explosion_small_no_tail_03.wav" type="AudioStream" id=6]
+[ext_resource path="res://projectiles/rocket/explosion_small_no_tail_01.wav" type="AudioStream" id=7]
+[ext_resource path="res://projectiles/rocket/explosion_small_no_tail_02.wav" type="AudioStream" id=8]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 147.34
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "explode"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.05 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "emit_smoke"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Hitbox")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.05 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "disable"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.03, 0.05, 0.07, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.890196, 0.478431, 0.988235, 1 ), Color( 0.501961, 1, 0.776471, 1 ), Color( 0.984314, 0.541176, 0.494118, 0.792157 ), Color( 0.815686, 0.690196, 1, 0.498039 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Gradient" id=4]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.0733333, 0.22, 0.36, 0.526667, 0.68, 0.846667, 1 )
+colors = PoolColorArray( 0.988281, 0.532745, 0.532745, 1, 0.989141, 0.83414, 0.567011, 1, 0.635541, 0.990859, 0.774337, 1, 0.700957, 0.9925, 0.958335, 1, 0.778833, 0.908542, 0.994453, 1, 0.892616, 0.850479, 0.99625, 1, 0.969827, 0.928354, 0.998203, 1, 1, 1, 1, 1 )
+
+[node name="PlayerExplosion" type="Node2D"]
+script = ExtResource( 3 )
+explosion_sounds = [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ) ]
+
+[node name="Sprite" type="Sprite" parent="."]
+unique_name_in_owner = true
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 0.392157 )
+scale = Vector2( 1.36719, 1.36719 )
+texture = ExtResource( 1 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 2 )]
+unique_name_in_owner = true
+visible = false
+collision_layer = 8
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 0, 3 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+anims/RESET = SubResource( 2 )
+anims/explode = SubResource( 3 )
+
+[node name="ExplosionSmoke" parent="." instance=ExtResource( 4 )]
+unique_name_in_owner = true
+amount = 20
+color = Color( 1, 1, 1, 1 )
+color_initial_ramp = SubResource( 4 )
+take_background_color = false
+
+[connection signal="hit_something" from="Hitbox" to="." method="_on_Hitbox_hit_something"]
+[connection signal="killed_something" from="Hitbox" to="." method="_on_Hitbox_killed_something"]
+
+[editable path="Hitbox"]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/CapybaraGainStatForEveryStat.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "explosion_size"
+text_key = "EFFECT_GAIN_STAT_FOR_EVERY_STAT"
+value = 1
+custom_key = "capybara_gain_stat_for_enemies_killed"
+storage_method = 1
+effect_sign = 0
+custom_args = [  ]
+nb_stat_scaled = 10
+stat_scaled = "stat_capybara_enemies_killed"
+perm_stats_only = false

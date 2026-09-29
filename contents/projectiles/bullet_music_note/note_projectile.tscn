@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://particles/running_smoke.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_2.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/auto_target_projectile.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_1.png" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_3.png" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_7.png" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_8.png" type="Texture" id=8]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_10.png" type="Texture" id=9]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_9.png" type="Texture" id=10]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_4.png" type="Texture" id=11]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_5.png" type="Texture" id=12]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/bullet_music_note/sprites/cp_music_note_6.png" type="Texture" id=13]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=14]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 6 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "fire"
+length = 0.6
+loop = true
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.12, 0.18, 0.26, 0.34, 0.42, 0.52 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 225.002
+
+[node name="NoteProjectile" instance=ExtResource( 1 )]
+position = Vector2( -1, 0 )
+script = ExtResource( 4 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 4, -1 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="Hitbox" parent="." index="1"]
+position = Vector2( -20, -1 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+scale = Vector2( 0.8, 0.8 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "fire"
+anims/RESET = SubResource( 2 )
+anims/fire = SubResource( 1 )
+
+[node name="MusicNoteParticles" parent="." index="3" instance=ExtResource( 2 )]
+amount = 1
+texture = ExtResource( 3 )
+emission_shape = 1
+emission_sphere_radius = 50.0
+scale_amount = 0.3
+color = Color( 1, 1, 1, 1 )
+script = null
+
+[node name="MusicNoteParticles2" parent="." index="4" instance=ExtResource( 2 )]
+amount = 2
+texture = ExtResource( 5 )
+emission_shape = 1
+emission_sphere_radius = 50.0
+scale_amount = 0.3
+color = Color( 1, 1, 1, 1 )
+script = null
+
+[node name="TargetTriggerHitbox" parent="." index="5" instance=ExtResource( 14 )]
+unique_name_in_owner = true
+position = Vector2( -24, 4 )
+collision_layer = 8
+deals_damage = false
+
+[node name="Collision" parent="TargetTriggerHitbox" index="0"]
+position = Vector2( 25, 0 )
+shape = SubResource( 3 )
+
+[connection signal="hit_something" from="TargetTriggerHitbox" to="." method="_on_TargetTriggerHitbox_hit_something"]
+
+[editable path="Hitbox"]
+[editable path="TargetTriggerHitbox"]

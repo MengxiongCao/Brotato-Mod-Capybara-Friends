@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://weapons/weapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://particles/curse/curse_particles.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/light_saber_green_gradient.tres" type="Gradient" id=3]
+[ext_resource path="res://weapons/shooting_behaviors/melee_weapon_shooting_behavior.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/light_saber.gd" type="Script" id=5]
+[ext_resource path="res://particles/sprites/particle_31.png" type="Texture" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/light_saber_heal/cp_light_saber_heal.png" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/capybara_weapon_outline_shadermat.tres" type="Material" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 60, 14 )
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 0.381818 ), 0.0, 0.0, 0, 0, Vector2( 0.474684, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.636364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=5]
+colors = PoolColorArray( 1, 1, 1, 1, 0.415527, 0.415527, 0.415527, 1 )
+
+[sub_resource type="CircleShape2D" id=2]
+resource_local_to_scene = true
+radius = 33.0606
+
+[node name="light_saber_heal" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
+outline_shader_mat = ExtResource( 8 )
+
+[node name="Sprite" parent="." index="0"]
+scale = Vector2( 1.15, 1.2 )
+texture = ExtResource( 7 )
+
+[node name="Collision" parent="Sprite/Hitbox" index="0"]
+position = Vector2( 2, 1 )
+shape = SubResource( 1 )
+
+[node name="LightningGreenLight" type="CPUParticles2D" parent="Sprite/Hitbox" index="1"]
+material = SubResource( 3 )
+position = Vector2( 21, 2 )
+amount = 3
+texture = ExtResource( 6 )
+emission_shape = 2
+emission_rect_extents = Vector2( 20, 1 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+angle = 720.0
+angle_random = 1.0
+scale_amount = 2.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 4 )
+color = Color( 0.176471, 0.176471, 0.176471, 1 )
+color_ramp = SubResource( 5 )
+color_initial_ramp = ExtResource( 3 )
+
+[node name="CurseUnitParticles" parent="Sprite/Hitbox" index="2" instance=ExtResource( 2 )]
+
+[node name="Muzzle" parent="Sprite" index="1"]
+visible = false
+position = Vector2( 16, -1 )
+
+[node name="Attach" parent="Sprite" index="2"]
+visible = false
+position = Vector2( -9.52381, -5.96046e-08 )
+
+[node name="CollisionShape2D" parent="Range" index="0"]
+shape = SubResource( 2 )
+
+[node name="ShootingBehavior" parent="." index="4"]
+script = ExtResource( 4 )
+
+[editable path="Sprite/Hitbox"]

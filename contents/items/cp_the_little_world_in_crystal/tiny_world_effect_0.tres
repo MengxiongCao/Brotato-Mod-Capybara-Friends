@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://effects/items/double_value_effect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "number_of_enemies"
+text_key = "EFFECT_SPAWN_TREE_WHEN_EVERY_ENEMIES_KILLED"
+value = 1
+custom_key = "capybara_spawn_tree_every_enemies_killed"
+storage_method = 1
+effect_sign = 0
+custom_args = [  ]
+value2 = 100
+sum_strategy = 0

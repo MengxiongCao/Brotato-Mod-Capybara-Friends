@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_fairy_attack.mp3-e076d82cb6536658858beacf3ef237f0.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/turrets/fairy/cp_fairy_attack.mp3"
+dest_files=[ "res://.import/cp_fairy_attack.mp3-e076d82cb6536658858beacf3ef237f0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

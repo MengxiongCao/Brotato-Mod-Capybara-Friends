@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/capybara_spawn_pets_for_x_enemies.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/items/pet_soul/pet_soul_effect_0.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+key = "capybara_spawn_pets_for_x_enemies"
+text_key = "EFFECT_CAPYBARA_SPAWN_PETS_FOR_X_ENEMIES"
+value = 1
+custom_key = "capybara_pet_soul"
+storage_method = 1
+effect_sign = 3
+custom_args = [  ]
+effect = ExtResource( 2 )
+stat_scaled = 30
+max_num = 5
+name = "CAPYBARA_PET_SOUL_NAME"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_vampire_princess_laughing.mp3-63738617d02840389102da256da6bf4e.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/pets/blood_aura/cp_vampire_princess_laughing.mp3"
+dest_files=[ "res://.import/cp_vampire_princess_laughing.mp3-63738617d02840389102da256da6bf4e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://weapons/weapon_stats/melee_weapon_stats.gd" type="Script" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/saint_sword/cp_saint_sword_1.mp3" type="AudioStream" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/saint_sword/cp_saint_sword.mp3" type="AudioStream" id=7]
+
+[resource]
+script = ExtResource( 4 )
+cooldown = 30
+damage = 10
+accuracy = 1.0
+crit_chance = 0.03
+crit_damage = 2.0
+min_range = 0
+max_range = 300
+knockback = 2
+knockback_piercing = 0.0
+can_have_positive_knockback = true
+can_have_negative_knockback = false
+effect_scale = 1.0
+scaling_stats = [ [ "stat_levels", 1.0 ], [ "stat_elemental_damage", 0.5 ], [ "stat_melee_damage", 0.5 ] ]
+lifesteal = 0.0
+shooting_sounds = [ ExtResource( 5 ), ExtResource( 7 ) ]
+sound_db_mod = -10
+is_healing = false
+recoil = 60
+recoil_duration = 0.1
+additional_cooldown_every_x_shots = -1
+additional_cooldown_multiplier = -1.0
+speed_percent_modifier = 0
+deal_dmg_on_return = false
+attack_type = 0
+alternate_attack_type = true

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/capybara_crystal_turret_effect/capybara_crystal_turret_effect.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/crystal_turret.tscn" type="PackedScene" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/crystal_turret_stats_3.tres" type="Resource" id=3]
+[ext_resource path="res://items/global/custom_arg.gd" type="Script" id=4]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 4 )
+arg_index = 2
+arg_sign = 2
+arg_value = 0
+arg_format = 0
+arg_key = ""
+
+[resource]
+script = ExtResource( 1 )
+key = ""
+text_key = "EFFECT_CAPYBARA_CRYSTAL_TURRET"
+value = 1
+custom_key = ""
+storage_method = 0
+effect_sign = 3
+custom_args = [ SubResource( 1 ) ]
+spawn_cooldown = -1
+scene = ExtResource( 2 )
+stats = ExtResource( 3 )
+effects = [  ]
+spawn_in_center = 200
+spawn_around_player = -1
+can_be_grouped = false
+is_pet = false
+shooting_animation_speed = 1.0
+is_burning = false
+is_spawning = false
+tracking_key = "item_cp_crystal_turret_3"

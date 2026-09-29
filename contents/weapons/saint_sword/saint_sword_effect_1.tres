@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://effects/items/double_value_effect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "capybara_xp"
+text_key = "EFFECT_CAPYBARA_GAIN_XP_FOR_EVERY_KIILLED"
+value = 1
+custom_key = "capybara_gain_xp_for_every_killed"
+storage_method = 1
+effect_sign = 0
+custom_args = [  ]
+value2 = 15
+sum_strategy = 0

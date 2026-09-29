@@ -1,0 +1,41 @@
+[gd_resource type="Resource" load_steps=15 format=2]
+
+[ext_resource path="res://items/characters/character_data.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/vampire_queen/vampire_queen_appearance.tres" type="Resource" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/vampire_queen/cp_vampire_queen_icon.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/vampire_queen/vampire_queen_effect_0.tres" type="Resource" id=4]
+[ext_resource path="res://weapons/ranged/medical_gun/1/medical_gun_data.tres" type="Resource" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/vampire_queen/vampire_queen_effect_3.tres" type="Resource" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/vampire_queen/vampire_queen_effect_2.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/vampire_queen/vampire_queen_effect_1.tres" type="Resource" id=8]
+[ext_resource path="res://weapons/melee/scissors/1/scissors_data.tres" type="Resource" id=9]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/blood_sword/1/blood_sword_1_data.tres" type="Resource" id=10]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/vampire_queen/vampire_queen_effect_5.tres" type="Resource" id=11]
+[ext_resource path="res://weapons/melee/sharp_tooth/1/sharp_tooth_data.tres" type="Resource" id=12]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/characters/capybara_no_item_appearance_effect.tres" type="Resource" id=13]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/light_saber_heal/1/light_saber_heal_2_data.tres" type="Resource" id=24]
+
+[resource]
+script = ExtResource( 1 )
+my_id = "character_vampire_queen"
+unlocked_by_default = true
+can_be_looted = true
+icon = ExtResource( 3 )
+name = "CHARACTER_VAMPIRE_QUEEN"
+tier = 0
+value = 1
+effects = [ ExtResource( 13 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 7 ) ]
+tracking_text = "DAMAGE_DEALT"
+is_lockable = true
+unlock_codex_descr_after_get_it = 1
+is_cursed = false
+curse_factor = 0.0
+max_nb = -1
+item_appearances = [ ExtResource( 2 ) ]
+tags = [  ]
+wanted_tags = [ "stat_lifesteal" ]
+banned_item_groups = [ "hp_regeneration", "consumable_heal" ]
+banned_items = [  ]
+banned_upgrades = [ "upgrade_hp_regeneration" ]
+starting_weapons = [ ExtResource( 12 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 10 ) ]
+starting_items = [  ]

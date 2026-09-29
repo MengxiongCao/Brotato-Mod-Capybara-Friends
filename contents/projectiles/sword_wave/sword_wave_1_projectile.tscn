@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/sword_wave/cp_bullet_lotus.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/capybara_no_light_burning_particles.tscn" type="PackedScene" id=3]
+[ext_resource path="res://particles/sprites/particle_31.png" type="Texture" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/lotus_burning_blue_gradient.tres" type="Gradient" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="Curve" id=4]
+_data = [ Vector2( 0, 0.763636 ), 0.0, 0.0, 0, 0, Vector2( 0.474684, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.636364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=5]
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fire"
+length = 0.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.06 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.38, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.2, 1.5 ), Vector2( 1.2, 0.9 ) ]
+}
+
+[node name="OpenLotusProjectile" instance=ExtResource( 1 )]
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 1, 1 )
+scale = Vector2( 1.2, 1.5 )
+texture = ExtResource( 2 )
+
+[node name="CPBurningParticles" parent="Sprite" index="0" instance=ExtResource( 3 )]
+position = Vector2( 22.8333, 0 )
+local_coords = false
+emission_sphere_radius = 35.0
+scale_amount = 1.6
+color_ramp = ExtResource( 5 )
+
+[node name="secondaryParticle" type="CPUParticles2D" parent="Sprite/CPBurningParticles" index="0"]
+material = SubResource( 3 )
+amount = 5
+lifetime = 0.5
+texture = ExtResource( 4 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+angle = 720.0
+angle_random = 1.0
+scale_amount = 2.5
+scale_amount_random = 0.89
+scale_amount_curve = SubResource( 4 )
+color = Color( 0.137255, 0.137255, 0.137255, 1 )
+color_ramp = SubResource( 5 )
+color_initial_ramp = ExtResource( 5 )
+
+[node name="Hitbox" parent="." index="1"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -23, 1 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 46, 0 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "fire"
+anims/RESET = SubResource( 1 )
+anims/fire = SubResource( 2 )
+
+[editable path="Hitbox"]

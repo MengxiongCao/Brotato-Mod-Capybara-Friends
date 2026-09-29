@@ -1,0 +1,19 @@
+{
+	"name": "Capybara",
+	"namespace": "Dbear",
+	"version_number": "2.1.1",
+	"description": "Some new characters, items and weapons.",
+	"website_url": "",
+	"dependencies": [],
+	"extra": {
+		"godot": {
+			"incompatibilities": [],
+			"optional_dependencies": ["GAFF-GMO3"],
+			"load_before": ["six666-BrotatoOnline"],
+			"authors": ["Dbear"],
+			"compatible_mod_loader_version": ["6.2.3"],
+			"compatible_game_version": ["1.1.15.4"],
+			"config_defaults": {}
+		}
+	}
+}

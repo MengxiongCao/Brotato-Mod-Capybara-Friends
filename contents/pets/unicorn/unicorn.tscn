@@ -1,0 +1,364 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://entities/units/pet/pet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/dark_fish/cp_shadow.png" type="Texture" id=2]
+[ext_resource path="res://resources/shaders/projectile_outline_shadermat.tres" type="Material" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/unicorn_stats.tres" type="Resource" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/capybara_trail_no_toplevel.gd" type="Script" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/cp_unicorn_close_eyes.png" type="Texture" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/cp_unicorn.png" type="Texture" id=8]
+[ext_resource path="res://entities/units/target_behavior/closest_enemy_target_behavior.gd" type="Script" id=9]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/unicorn.gd" type="Script" id=10]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/unicorn/cp_unicorn_eating.png" type="Texture" id=11]
+[ext_resource path="res://overlap/hitbox.gd" type="Script" id=13]
+[ext_resource path="res://entities/units/pet/hand_pet.png" type="Texture" id=15]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/rainbow_gradient.tres" type="Gradient" id=16]
+
+[sub_resource type="ViewportTexture" id=8]
+flags = 4
+viewport_path = NodePath("Animation/Viewport")
+
+[sub_resource type="Animation" id=4]
+resource_name = "eat"
+length = 0.5
+step = 0.025
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Animation:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.15, 0, 0.5, 0, 0, -0.25, 0, 0.25, 0, 0, -0.15, 0, 0.5, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Animation:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -24, -0.25, 0, 0.25, 0, -20.934, -0.25, 0, 0.25, 0, -22, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Animation:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.9, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.25, 0.475 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Animation:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1.8, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.225, 0.475 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Animation/Viewport/offset/unicorn_body:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.075, 0.325, 0.475 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 8 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "fire"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.25, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.760784, 0.513726, 0.890196, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "move"
+length = 0.5
+loop = true
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -24 ), Vector2( 0, -20.062 ), Vector2( 0, -24 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation/HandPet:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "pet"
+length = 2.0
+step = 0.025
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Animation:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.15, 0, 0.5, 0, 0, -0.25, 0, 0.25, 0, 0, -0.15, 0, 0.5, 0, 0, -0.15, 0, 0.5, 0, 0, -0.15, 0, 0.5, 0, 0, -0.15, 0, 0.5, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.5, 1, 1.5, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Animation:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -24, -0.25, 0, 0.25, 0, -20.934, -0.25, 0, 0.25, 0, -22, -0.25, 0, 0.25, 0, -24, -0.25, 0, 0.25, 0, -22, -0.25, 0, 0.25, 0, -24, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.5, 1, 1.5, 2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Animation:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1.05, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1.05, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.5, 1, 1.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Animation:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.9, -0.25, 0, 0.25, 0, 0.95, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.95, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.5, 1, 1.5, 2 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Animation/HandPet:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.05, 0.1, 0.45, 0.625, 0.675, 0.75, 1, 1.2, 1.275 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 25, -30 ), Vector2( 4, 0 ), Vector2( 15, 0 ), Vector2( 25, 10 ), Vector2( 10, 0 ), Vector2( 4, 0 ), Vector2( 15, 0 ), Vector2( 25, 5 ), Vector2( 24, 6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Animation/HandPet:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.025, 0.125, 0.65, 1.175, 1.275 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.6 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 0.6 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Animation/HandPet:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.175, 1.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Animation/HandPet:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.025, 0.125, 0.575, 0.65, 0.7, 1.2, 1.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -30.0, -17.0, 0.0, -30.0, -17.0, 0.0, -30.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Animation/Viewport/offset/unicorn_body:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2, 1.275 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 8 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "rush"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0.694118, 0.576471, 1 ), Color( 0.996078, 0.980392, 0.623529, 1 ), Color( 0.47451, 1, 0.741176, 1 ), Color( 0.619608, 1, 0.964706, 1 ), Color( 0.54902, 0.776471, 0.996078, 1 ), Color( 0.788235, 0.611765, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 75.0267
+
+[node name="Unicorn" instance=ExtResource( 1 )]
+script = ExtResource( 10 )
+outline_material = ExtResource( 3 )
+crit_sounds = [  ]
+hurt_sounds = [  ]
+burn_sounds = [  ]
+dodge_sounds = [  ]
+stats = ExtResource( 4 )
+flash_mat = null
+shoot_projectiles = true
+pet_audio = null
+
+[node name="Animation" parent="." index="0"]
+position = Vector2( 3, -9 )
+
+[node name="Viewport" type="Viewport" parent="Animation" index="0"]
+size = Vector2( 300, 300 )
+transparent_bg = true
+hdr = false
+disable_3d = true
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="offset" type="Node2D" parent="Animation/Viewport" index="0"]
+position = Vector2( 150, 130 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="sp_shadow" type="Sprite" parent="Animation/Viewport/offset" index="0"]
+position = Vector2( 0, 7.62939e-06 )
+texture = ExtResource( 2 )
+
+[node name="unicorn_body" type="Sprite" parent="Animation/Viewport/offset" index="1"]
+position = Vector2( 0, 4.99999 )
+z_index = 1
+texture = ExtResource( 8 )
+
+[node name="Sprite" parent="Animation" index="1"]
+position = Vector2( 0, 2 )
+texture = SubResource( 8 )
+
+[node name="HandPet" type="Sprite" parent="Animation" index="2"]
+visible = false
+position = Vector2( 24, 6 )
+rotation = -0.523599
+scale = Vector2( 1, 0.6 )
+texture = ExtResource( 15 )
+
+[node name="capybara_line_effect" type="Line2D" parent="Animation" index="3"]
+unique_name_in_owner = true
+show_behind_parent = true
+points = PoolVector2Array( 1, 23 )
+default_color = Color( 1, 0.992157, 0.4, 1 )
+script = ExtResource( 6 )
+trail_width = 70.0
+min_point_distance = 4.0
+max_segment_length = 100.0
+trail_gradient = ExtResource( 16 )
+
+[node name="Collision" parent="." index="1"]
+visible = false
+
+[node name="Hurtbox" parent="." index="2"]
+visible = false
+monitorable = true
+
+[node name="AnimationPlayer" parent="." index="3"]
+anims/eat = SubResource( 4 )
+anims/fire = SubResource( 11 )
+anims/move = SubResource( 5 )
+anims/pet = SubResource( 9 )
+anims/rush = SubResource( 12 )
+
+[node name="TargetBehavior" parent="." index="6"]
+script = ExtResource( 9 )
+target_player_if_no_target = false
+pet_id = ""
+exclude_elite_and_boss_target = false
+
+[node name="Hitbox" type="Area2D" parent="." index="10"]
+unique_name_in_owner = true
+position = Vector2( 0, -2 )
+collision_layer = 1024
+script = ExtResource( 13 )
+
+[node name="Collision" type="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( 6, -9 )
+shape = SubResource( 7 )
+
+[node name="LightTriggerZone" type="Area2D" parent="." index="11"]
+unique_name_in_owner = true
+visible = false
+position = Vector2( 0, -12 )
+collision_layer = 1024
+script = ExtResource( 13 )
+deals_damage = false
+
+[node name="Collision" type="CollisionShape2D" parent="LightTriggerZone" index="0"]
+position = Vector2( -3, -34 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 7 )
+
+[connection signal="target_found" from="TargetBehavior" to="MovementBehavior" method="_on_TargetBehavior_target_found"]
+[connection signal="target_player" from="TargetBehavior" to="MovementBehavior" method="_on_TargetBehavior_target_player"]
+[connection signal="hit_something" from="Hitbox" to="." method="_on_Hitbox_hit_something"]
+[connection signal="killed_something" from="Hitbox" to="." method="_on_Hitbox_killed_something"]
+[connection signal="hit_something" from="LightTriggerZone" to="." method="_on_LightTriggerZone_hit_something"]

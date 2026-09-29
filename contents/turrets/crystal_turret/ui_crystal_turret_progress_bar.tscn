@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ui/hud/ui_lifebar_bg.png" type="Texture" id=1]
+[ext_resource path="res://ui/hud/ui_lifebar_fill.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/turrets/crystal_turret/ui_crystal_turret_progress_bar.gd" type="Script" id=3]
+[ext_resource path="res://ui/hud/ui_lifebar_frame.png" type="Texture" id=4]
+[ext_resource path="res://resources/themes/base_theme.tres" type="Theme" id=5]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.970245, 0.707031, 1, 1, 0.546875, 0.936279, 1, 1 )
+
+[node name="UICrystalTurretProgressBar" type="TextureProgress"]
+margin_right = 320.0
+margin_bottom = 50.0
+theme = ExtResource( 5 )
+step = 0.01
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 2 )
+tint_progress = Color( 0.831373, 0.423529, 1, 1 )
+script = ExtResource( 3 )
+progress_gradient = SubResource( 1 )

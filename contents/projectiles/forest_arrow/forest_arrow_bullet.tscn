@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/auto_target_projectile_master.gd" type="Script" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/forest_arrow/cp_forest_arrow.png" type="Texture" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/capybara_trail_no_toplevel.gd" type="Script" id=4]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0.376471, 1, 0.603922, 0.686275, 0.729412, 1, 0.862745, 0 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 289.588
+
+[node name="forest_arrow" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+capybara_shader = null
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 1.00001, -1 )
+texture = ExtResource( 3 )
+
+[node name="capybara_line_effect" type="Line2D" parent="Sprite" index="0"]
+show_behind_parent = true
+points = PoolVector2Array( -1, 1 )
+default_color = Color( 1, 0.992157, 0.4, 1 )
+script = ExtResource( 4 )
+max_points = 20
+trail_gradient = SubResource( 3 )
+
+[node name="Hitbox" parent="." index="1"]
+position = Vector2( -18, 1 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( 18, 0 )
+
+[node name="TargetTriggerHitbox" parent="." index="3" instance=ExtResource( 6 )]
+unique_name_in_owner = true
+visible = false
+position = Vector2( -24, 4 )
+collision_layer = 8
+deals_damage = false
+
+[node name="Collision" parent="TargetTriggerHitbox" index="0"]
+position = Vector2( 25, 0 )
+shape = SubResource( 2 )
+
+[connection signal="killed_something" from="Hitbox" to="." method="_on_Hitbox_killed_something"]
+[connection signal="hit_something" from="TargetTriggerHitbox" to="." method="_on_TargetTriggerHitbox_hit_something"]
+
+[editable path="Hitbox"]
+[editable path="TargetTriggerHitbox"]

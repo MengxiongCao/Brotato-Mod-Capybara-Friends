@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/effects/ChanceStatGainEffect.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+key = "stat_hp_regeneration"
+text_key = "EFFECT_GAIN_GOLD_WHEN_HEAL"
+value = 10
+custom_key = "gain_gold_when_heal"
+storage_method = 1
+effect_sign = 0
+custom_args = [  ]
+chance = 10
+tracking_text = ""

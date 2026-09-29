@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ui/hud/ui_lifebar_bg.png" type="Texture" id=1]
+[ext_resource path="res://ui/hud/ui_lifebar_fill.png" type="Texture" id=2]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/extensions/ui_containers/ui_crystal_progress_bar.gd" type="Script" id=3]
+[ext_resource path="res://ui/hud/ui_lifebar_frame.png" type="Texture" id=4]
+[ext_resource path="res://resources/themes/base_theme.tres" type="Theme" id=5]
+[ext_resource path="res://resources/fonts/raw/Anybody-Medium.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/icons/cp_crystal_heart_core.png" type="Texture" id=7]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.149758, 0.309179, 0.497585, 0.657005, 0.797101, 0.94686 )
+colors = PoolColorArray( 1, 0.61853, 0.609375, 1, 1, 0.799355, 0.622315, 1, 1, 0.985921, 0.639568, 1, 0.67731, 1, 0.773108, 1, 0.726374, 1, 0.967934, 1, 0.638306, 0.808093, 0.972656, 1, 0.844055, 0.726563, 1, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 10
+font_data = ExtResource( 6 )
+
+[node name="UICrystalProgressBar" type="TextureProgress"]
+margin_right = 320.0
+margin_bottom = 50.0
+theme = ExtResource( 5 )
+step = 0.01
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 2 )
+tint_progress = Color( 0.831373, 0.423529, 1, 1 )
+script = ExtResource( 3 )
+update_interval = 0.2
+progress_gradient = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 26, 23 )
+scale = Vector2( 0.369792, 0.369792 )
+texture = ExtResource( 7 )
+
+[node name="CrystalProgressLabel" type="Label" parent="."]
+unique_name_in_owner = true
+margin_left = 47.0
+margin_top = -2.0
+margin_right = 84.0
+margin_bottom = 60.0
+theme = ExtResource( 5 )
+custom_fonts/font = SubResource( 2 )
+text = "0"

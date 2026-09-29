@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/materials/capybara_flow_light.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.00483092, 0.120773, 0.246377, 0.410628, 0.570048, 0.714976, 0.855072, 1 )
+colors = PoolColorArray( 1, 0.607843, 0.607843, 1, 1, 0.805176, 0.554688, 1, 0.994415, 1, 0.285156, 1, 0.460938, 1, 0.570435, 1, 0.597656, 1, 0.96228, 1, 0.578125, 0.901123, 1, 1, 0.86908, 0.695313, 1, 1, 1, 1, 1, 1 )
+
+[node name="CapybaraFlowLight" type="Sprite"]
+script = ExtResource( 1 )
+flow_color = Color( 0.196078, 0.678431, 1, 0.517647 )
+flow_color_end = Color( 0.921569, 0.576471, 1, 0.85098 )
+flow_gradient = SubResource( 1 )
+flow_speed = 0.7
+flow_width = 0.15
+flow_softness = 0.15
+flow_interval = 1.0

@@ -1,0 +1,471 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://entities/units/pet/pet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/capybara_blade_line_effect.gd" type="Script" id=2]
+[ext_resource path="res://overlap/hitbox.gd" type="Script" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/crystal_sword/crystal_sword.gd" type="Script" id=4]
+[ext_resource path="res://entities/units/pet/hand_pet.png" type="Texture" id=5]
+[ext_resource path="res://entities/units/target_behavior/closest_enemy_target_behavior.gd" type="Script" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/crystal_sword/crystal_sword_stats.tres" type="Resource" id=7]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/crystal_sword/cp_crystal_sword.png" type="Texture" id=8]
+[ext_resource path="res://resources/shaders/projectile_outline_shadermat.tres" type="Material" id=10]
+
+[sub_resource type="PhysicsMaterial" id=6]
+friction = 0.0
+
+[sub_resource type="Gradient" id=14]
+offsets = PoolRealArray( 0.20155, 0.465116, 1 )
+colors = PoolColorArray( 0.941176, 0.603922, 1, 0.447059, 0.67451, 0.917647, 1, 0.368627, 1, 1, 1, 0 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 40.0
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation/Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation/Sprite:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation/HandPet:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.791, 1.847 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Animation/HandPet:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 24, -100 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Animation/HandPet:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Animation/Sprite:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 1.05
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 0.297302 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.34902, 0.34902, 0.34902, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation/Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 0.34151 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation/Sprite:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.25, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "stop_burning"
+}, {
+"args": [  ],
+"method": "death_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+loop = true
+step = 0.5
+
+[sub_resource type="Animation" id=8]
+resource_name = "idle_pet"
+length = 2.0
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation/Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 4.528 ), Vector2( 0, 0 ), Vector2( 0, 4.528 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation/Sprite:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.05, 0.95 ), Vector2( 1, 1 ), Vector2( 1.05, 0.95 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation/HandPet:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "move"
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation/Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 4.528 ), Vector2( 0, 0 ), Vector2( 0, 4.528 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation/Sprite:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.03, 0.97 ), Vector2( 1, 1 ), Vector2( 1.03, 0.97 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation/HandPet:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "pet"
+length = 1.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation/Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.6, 0.7, 1.35, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation/Sprite:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.6, 0.7, 1.35, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation/HandPet:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.6, 0.65, 0.7, 1.3, 1.35 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 24, -100 ), Vector2( 12, -53 ), Vector2( 32, -42 ), Vector2( 20, -66 ), Vector2( 12, -53 ), Vector2( 32, -42 ), Vector2( 24, -100 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation/HandPet:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.05, 0.6, 0.7, 1.3, 1.35 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.791, 1.847 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.791, 1.847 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Animation/HandPet:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.05, 0.6, 0.65, 0.7, 1.3, 1.35 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 25.1, -13.5, 0.0, 25.1, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Animation/HandPet:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 468.796
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 111, 29.5 )
+
+[node name="CapybaraCrystalSword" instance=ExtResource( 1 )]
+physics_material_override = SubResource( 6 )
+script = ExtResource( 4 )
+outline_material = ExtResource( 10 )
+crit_sounds = [  ]
+hurt_sounds = [  ]
+burn_sounds = [  ]
+dodge_sounds = [  ]
+stats = ExtResource( 7 )
+mirror_sprite_with_movement = false
+flash_mat = null
+damage_tracking_id = "item_capybara_crystal_sword"
+weapon_data = null
+rush_speed = 30.0
+rush_acceleration = 3.0
+rush_stop_distance = 10.0
+rush_extra_distance = 200.0
+lost_target_extra_distance = 100.0
+rush_max_speed_ratio = 1.75
+motion_max_cooldown = 150.0
+motion_min_cooldown = 6.0
+motion_cooldown_scaling_power = 0.5
+kill_chain_arc_ratio = 0.8
+kill_chain_min_arc_height = 60.0
+kill_chain_max_arc_height = 300.0
+kill_chain_momentum_retention = 0.75
+slash_angular_speed = 24.0
+slash_end_pause = 0.01
+home_min_radius = 100.0
+home_max_radius = 300.0
+home_rush_speed = 36.0
+home_rush_acceleration = 2.5
+home_stop_distance = 18.0
+home_up_delay = 0.01
+idle_orbit_speed = 3.0
+enemy_turn_speed = 0.8
+home_turn_speed = 0.1
+idle_turn_speed = 0.2
+end_wave_turn_speed = 0.14
+idle_float_height = 50.0
+idle_float_speed = 1.5
+idle_float_smoothing = 10.0
+float_return_speed = 12.0
+sprite_angle_offset = 0.0
+
+[node name="Animation" parent="." index="0"]
+position = Vector2( 0, 0 )
+
+[node name="Sprite" parent="Animation" index="0"]
+texture = ExtResource( 8 )
+offset = Vector2( 45, 0 )
+
+[node name="sword_wave_point_end" type="Position2D" parent="Animation/Sprite" index="0"]
+position = Vector2( 156.614, 0 )
+
+[node name="sword_wave_point_start" type="Position2D" parent="Animation/Sprite" index="1"]
+position = Vector2( 37.833, 0 )
+
+[node name="Position2D2" type="Position2D" parent="Animation/Sprite" index="2"]
+
+[node name="capybara_line_effect" type="Line2D" parent="Animation/Sprite" index="3"]
+show_behind_parent = true
+position = Vector2( 60.3573, -30.9896 )
+points = PoolVector2Array( -14.3573, 34.0001 )
+default_color = Color( 1, 0.992157, 0.4, 1 )
+script = ExtResource( 2 )
+root_socket_path = NodePath("../sword_wave_point_end")
+tip_socket_path = NodePath("../sword_wave_point_start")
+max_lifetime = 0.25
+taper_end_width_ratio = 0.5
+taper_power = 1.0
+trail_gradient = SubResource( 14 )
+flow_speed = 3.8
+
+[node name="HandPet" type="Sprite" parent="Animation" index="1"]
+visible = false
+position = Vector2( 24, -100 )
+scale = Vector2( 0.791, 1.847 )
+texture = ExtResource( 5 )
+offset = Vector2( -15, 31 )
+
+[node name="Collision" parent="." index="1"]
+visible = false
+position = Vector2( 0, 0 )
+shape = SubResource( 2 )
+
+[node name="Hurtbox" parent="." index="2"]
+visible = false
+position = Vector2( 0, 0 )
+
+[node name="AnimationPlayer" parent="." index="3"]
+anims/RESET = SubResource( 3 )
+anims/death = SubResource( 4 )
+anims/idle = SubResource( 5 )
+anims/idle_pet = SubResource( 8 )
+anims/move = SubResource( 9 )
+anims/pet = SubResource( 12 )
+next/idle_pet = "idle_pet"
+next/move = "idle_pet"
+next/pet = "idle_pet"
+blend_times = [ "idle_pet", "idle", 0.2, "idle_pet", "idle_pet", 0.2, "idle_pet", "move", 0.2, "move", "idle_pet", 0.2 ]
+
+[node name="FlashTimer" parent="." index="4"]
+wait_time = 0.3
+
+[node name="MovementBehavior" parent="." index="5"]
+distance_to_target = 250.0
+
+[node name="TargetBehavior" parent="." index="6"]
+script = ExtResource( 6 )
+target_player_if_no_target = false
+pet_id = ""
+exclude_elite_and_boss_target = false
+
+[node name="TargetTriggerZone" type="Area2D" parent="." index="10"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetTriggerZone" index="0"]
+unique_name_in_owner = true
+shape = SubResource( 10 )
+
+[node name="Hitbox" type="Area2D" parent="." index="11"]
+unique_name_in_owner = true
+collision_layer = 1024
+script = ExtResource( 3 )
+
+[node name="Collision" type="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( 47, -0.5 )
+shape = SubResource( 15 )
+
+[connection signal="body_entered" from="TargetTriggerZone" to="." method="_on_TargetTriggerZone_body_entered"]
+[connection signal="body_exited" from="TargetTriggerZone" to="." method="_on_TargetTriggerZone_body_exited"]
+[connection signal="hit_something" from="Hitbox" to="." method="_on_Hitbox_hit_something"]
+[connection signal="killed_something" from="Hitbox" to="." method="_on_Hitbox_killed_something"]

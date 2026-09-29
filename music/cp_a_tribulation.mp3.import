@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_a_tribulation.mp3-d215e326822af0f12f77721621077539.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/music/cp_a_tribulation.mp3"
+dest_files=[ "res://.import/cp_a_tribulation.mp3-d215e326822af0f12f77721621077539.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

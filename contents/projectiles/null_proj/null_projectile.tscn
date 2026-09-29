@@ -1,0 +1,97 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://projectiles/player_projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/extensions/cp_null.png" type="Texture" id=2]
+[ext_resource path="res://resources/shaders/weapon_outline_shadermat.tres" type="Material" id=3]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/weapons/capybara_curse_particles.tscn" type="PackedScene" id=4]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/auto_target_projectile_master.gd" type="Script" id=5]
+[ext_resource path="res://overlap/hitbox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/capybara_trail_no_toplevel.gd" type="Script" id=7]
+
+[sub_resource type="Gradient" id=8]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 200, 70 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=7]
+resource_name = "fire"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "stop"
+} ]
+}
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 930.363
+
+[node name="NullProjectile" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
+capybara_shader = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 2, 2 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="capybara_line_effect" type="Line2D" parent="Sprite" index="0"]
+show_behind_parent = true
+position = Vector2( 0, -1.5 )
+points = PoolVector2Array( -1, 1 )
+default_color = Color( 1, 0.992157, 0.4, 1 )
+script = ExtResource( 7 )
+trail_width = 6.0
+trail_gradient = SubResource( 8 )
+
+[node name="Collision" parent="Hitbox" index="0"]
+position = Vector2( -1, -1 )
+shape = SubResource( 6 )
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "fire"
+anims/RESET = SubResource( 2 )
+anims/fire = SubResource( 7 )
+
+[node name="TargetTriggerHitbox" parent="." index="3" instance=ExtResource( 6 )]
+unique_name_in_owner = true
+visible = false
+position = Vector2( -24, 4 )
+collision_layer = 8
+deals_damage = false
+
+[node name="Collision" parent="TargetTriggerHitbox" index="0"]
+position = Vector2( 25, 0 )
+shape = SubResource( 5 )
+
+[node name="CapybaraCurseParticles" parent="." index="4" instance=ExtResource( 4 )]
+
+[connection signal="hit_something" from="TargetTriggerHitbox" to="." method="_on_TargetTriggerHitbox_hit_something"]
+
+[editable path="Hitbox"]
+[editable path="TargetTriggerHitbox"]

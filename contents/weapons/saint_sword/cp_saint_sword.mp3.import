@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cp_saint_sword.mp3-97b9590cf4fa74513647ee3ead29d0e1.mp3str"
+
+[deps]
+
+source_file="res://mods-unpacked/Dbear-Capybara/contents/weapons/saint_sword/cp_saint_sword.mp3"
+dest_files=[ "res://.import/cp_saint_sword.mp3-97b9590cf4fa74513647ee3ead29d0e1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,403 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://entities/entity.tscn" type="PackedScene" id=1]
+[ext_resource path="res://visual_effects/shader_noise_displacement.tres" type="Shader" id=2]
+[ext_resource path="res://overlap/hurtbox.gd" type="Script" id=3]
+[ext_resource path="res://entities/units/pet/jellyshield/jellyshield_head.png" type="Texture" id=4]
+[ext_resource path="res://particles/sprites/particle_31.png" type="Texture" id=5]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/fox_fire/fox_fire.gd" type="Script" id=6]
+[ext_resource path="res://resources/sounds/burn/fireball_impact_burn_02.wav" type="AudioStream" id=7]
+[ext_resource path="res://overlap/hitbox.gd" type="Script" id=8]
+[ext_resource path="res://resources/sounds/burn/fireball_impact_burn_03.wav" type="AudioStream" id=9]
+[ext_resource path="res://particles/burning/torch_burning_particles.tscn" type="PackedScene" id=10]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/fox_fire/cp_foxfire.png" type="Texture" id=11]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/pets/fox_fire/capybara_foxfire_gradient.tres" type="Gradient" id=12]
+[ext_resource path="res://resources/sounds/burn/fireball_impact_burn_01.wav" type="AudioStream" id=13]
+[ext_resource path="res://particles/curse/curse_enemy_particles.tscn" type="PackedScene" id=14]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 2 )
+shader_param/wave_speed = 0.398
+shader_param/wave_size = 1.769
+shader_param/wave_strenght = 0.213
+shader_param/TextureUniform = ExtResource( 4 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "block"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -27 ), Vector2( 0, -27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 1.5 ), Vector2( 1.5, 0.5 ), Vector2( 0.75, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.760784, 0.513726, 0.890196, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 9 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "hit"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -27 ), Vector2( 0, -27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 1.5 ), Vector2( 1.5, 0.5 ), Vector2( 0.75, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.760784, 0.513726, 0.890196, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 9 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "hit_1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -27 ), Vector2( 0, -27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 1.5 ), Vector2( 1.5, 0.5 ), Vector2( 0.75, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.760784, 0.513726, 0.890196, 1 ), Color( 0.580392, 0.258824, 0.670588, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 7 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "hit_2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Animation:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -27 ), Vector2( 0, -27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Animation:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 1.5 ), Vector2( 1.5, 0.5 ), Vector2( 0.75, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Animation:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.580392, 0.258824, 0.670588, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Animation:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 13 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 38.0132
+
+[sub_resource type="CanvasItemMaterial" id=7]
+blend_mode = 1
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 0.381818 ), 0.0, 0.0, 0, 0, Vector2( 0.474684, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.636364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=9]
+colors = PoolColorArray( 1, 1, 1, 1, 0.415527, 0.415527, 0.415527, 1 )
+
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0, 0.144928, 0.384, 0.514493, 0.681159, 0.847826, 0.942029 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.317809, 0, 0.496094, 1, 0.762927, 0.556183, 0.878906, 1, 0.641018, 0.25177, 0.859375, 1, 0.874115, 0.707031, 1, 1, 0.310441, 0.0692139, 0.492188, 1, 0.977112, 0.946733, 1, 1 )
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 39.0128
+
+[node name="FoxFire" instance=ExtResource( 1 )]
+script = ExtResource( 6 )
+outline_material = null
+radius = 150.0
+rotation_speed = 1.0
+
+[node name="Animation" parent="." index="0"]
+position = Vector2( 0, -27 )
+
+[node name="Foxfire_body" type="Viewport" parent="Animation" index="0"]
+size = Vector2( 64, 64 )
+transparent_bg = true
+hdr = false
+disable_3d = true
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="sp_body" type="Sprite" parent="Animation/Foxfire_body" index="0"]
+material = SubResource( 3 )
+position = Vector2( 32, 30 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Sprite" parent="Animation" index="1"]
+position = Vector2( 0, 9 )
+texture = ExtResource( 11 )
+
+[node name="Collision" parent="." index="1"]
+visible = false
+
+[node name="AnimationPlayer" parent="." index="2"]
+autoplay = "RESET"
+anims/block = SubResource( 14 )
+anims/hit = SubResource( 4 )
+anims/hit_1 = SubResource( 12 )
+anims/hit_2 = SubResource( 13 )
+
+[node name="Hurtbox" type="Area2D" parent="." index="3"]
+position = Vector2( 0, 5 )
+scale = Vector2( 0.5, 0.5 )
+collision_layer = 0
+collision_mask = 16
+script = ExtResource( 3 )
+
+[node name="Collision" type="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( -2, -40 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="4"]
+stream = ExtResource( 9 )
+bus = "Sound"
+
+[node name="gun_offset" type="Node2D" parent="." index="5"]
+position = Vector2( -2, -10 )
+
+[node name="FoxFireBurningParticles" parent="." index="6" instance=ExtResource( 10 )]
+unique_name_in_owner = true
+position = Vector2( 0, -10 )
+amount = 3
+local_coords = false
+emission_sphere_radius = 30.0
+scale_amount = 1.2
+color_ramp = ExtResource( 12 )
+
+[node name="FoxFireLight" type="CPUParticles2D" parent="FoxFireBurningParticles" index="1"]
+material = SubResource( 7 )
+position = Vector2( -1, 2 )
+amount = 3
+texture = ExtResource( 5 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+angle = 720.0
+angle_random = 1.0
+scale_amount = 4.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 8 )
+color = Color( 0.176471, 0.176471, 0.176471, 1 )
+color_ramp = SubResource( 9 )
+color_initial_ramp = SubResource( 10 )
+
+[node name="Hitbox" type="Area2D" parent="." index="7"]
+unique_name_in_owner = true
+position = Vector2( 0, -20 )
+collision_layer = 1024
+collision_mask = 0
+script = ExtResource( 8 )
+
+[node name="Collision" type="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2( -1, 5 )
+shape = SubResource( 11 )
+
+[node name="CursedUnitParticles" parent="." index="8" instance=ExtResource( 14 )]
+position = Vector2( 0, -20 )
+emission_sphere_radius = 20.0
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="hit_something" from="Hitbox" to="." method="_on_Hitbox_hit_something"]

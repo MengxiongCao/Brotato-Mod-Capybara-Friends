@@ -1,0 +1,43 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://weapons/weapon_stats/ranged_weapon_stats.gd" type="Script" id=1]
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/contents/projectiles/blade_of_death_sword_wave/blade_of_death_sword_wave_projectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://weapons/ranged/fireball/Fire 5 (DPS).mp3" type="AudioStream" id=3]
+[ext_resource path="res://weapons/melee_sounds/whoosh_swish_high_big_01.wav" type="AudioStream" id=4]
+[ext_resource path="res://weapons/ranged/flamethrower/gas_med_flame_ignite_02.wav" type="AudioStream" id=5]
+[ext_resource path="res://weapons/ranged/flamethrower/gas_med_flame_ignite_01.wav" type="AudioStream" id=6]
+
+[resource]
+script = ExtResource( 1 )
+cooldown = 60
+damage = 20
+accuracy = 1.0
+crit_chance = 0.03
+crit_damage = 2.0
+min_range = 0
+max_range = 1000
+knockback = 0
+knockback_piercing = 0.0
+can_have_positive_knockback = true
+can_have_negative_knockback = false
+effect_scale = 0.1
+scaling_stats = [ [ "stat_melee_damage", 1.2 ], [ "stat_dodge", 1.2 ] ]
+lifesteal = 0.0
+shooting_sounds = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ) ]
+sound_db_mod = 0
+is_healing = false
+recoil = 25
+recoil_duration = 0.1
+additional_cooldown_every_x_shots = -1
+additional_cooldown_multiplier = -1.0
+speed_percent_modifier = 0
+nb_projectiles = 3
+projectile_spread = 0.0
+piercing = 4
+piercing_dmg_reduction = 0.0
+bounce = 0
+bounce_dmg_reduction = 0.0
+can_bounce = false
+projectile_speed = 2000
+increase_projectile_speed_with_range = false
+projectile_scene = ExtResource( 2 )

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://mods-unpacked/Dbear-Capybara/materials/capybara_alpha_two_color.shader" type="Shader" id=1]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/opaque_color = Color( 1, 1, 1, 1 )
+shader_param/partial_alpha_color = Color( 0.933333, 0.615686, 1, 1 )
